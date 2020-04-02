@@ -1,0 +1,136 @@
+.banner-background {
+    background: url(../../images/Banner.png) center/cover;
+    height: 100%;
+    width: 100%;
+}
+
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-message-container {
+    width: 490px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 3px solid rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    padding: 4px;
+    margin-top: 50px;
+    text-align: center;
+    font-family: 'PressStart2P';
+
+    animation: appear 1s steps(44, end);
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    bottom: 70px;
+}
+
+.text-1, .text-2, .text-3 {
+    color: white;
+}
+
+.text-1 {
+    font-size: 22px;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: auto;
+    width: 100%;
+    opacity: 0;
+    border-right: 2px solid rgba(255,255,255, 1);
+    animation: typing 1.5s steps(44, end), blink1 .5s 2.8 step-end;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.text-2 {
+    font-size: 22px;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: auto;
+    width: 100%;
+    opacity: 0;
+    border-right: 2px solid rgba(255,255,255, 1);
+    animation: typing 1.5s steps(44, end), blink2 .5s 3.5 step-end;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+}
+
+.text-3 {
+    font-size: 22px;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: auto;
+    width: 190px;
+    opacity: 0;
+    border-right: 2px solid rgba(255,255,255, 0.0);
+    animation: typing .6s steps(20, end), blink3 .5s step-end infinite alternate;
+    animation-delay: 4.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        }
+        100% {
+        opacity: 1;
+        }
+    }
+
+@keyframes typing {
+    0% {
+        width: 0;
+        }
+        1% {
+        opacity: 1;
+        }
+        100% {
+        opacity: 1;
+        }
+    }
+
+@keyframes blink1 {
+    50% {
+        border-color: rgba(255,255,255, 0);
+        }
+    }
+
+@keyframes blink2 {
+    50% {
+        border-color: rgba(255,255,255, 0);
+        }
+    }
+
+@keyframes blink3 {
+    50% {
+        border-color: rgba(255,255,255);
+        }
+    }
+
+/* mobile css */
+@media only screen and (min-width: 0px) and (max-width: 900px), only screen and (min-device-width: 0px) and (max-width: 900px) {
+    .banner-background {
+        background: url(../../images/Banner.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .banner-message-container {
+        width: 350px;
+    }
+    .text-1 {
+        font-size: 16px;
+    }
+
+    .text-2 {
+        font-size: 16px;
+    }
+
+    .text-3 {
+        font-size: 16px;
+        width: 140px;
+    }
+}
