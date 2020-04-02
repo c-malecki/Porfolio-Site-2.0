@@ -34,6 +34,11 @@
     scale: 1.1;
 }
 
+a:hover {
+    text-decoration: none !important;
+    color: rgba(242, 255, 122) !important;
+}
+
 @media (hover: hover) {
     .main-nav-link:hover {
         color: rgba(242, 255, 122);
@@ -55,7 +60,8 @@
     }
 }
 
-@media only screen and (min-width: 0px) and (max-width: 900px), only screen and (min-device-width: 0px) and (max-width: 900px) {
+@media only screen and (min-width: 0px) and (max-width: 992px),
+only screen and (min-device-width: 0px) and (max-width: 992px) {
     .main-nav {
         display: none;
     }
