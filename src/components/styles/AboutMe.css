@@ -56,7 +56,7 @@ only screen and (min-device-width: 0px) and (max-width: 992px) {
 
     .about-row {
         margin-top: 0;
-        margin-bottom: 96px;
+        margin-bottom: 50px;
         border: none;
         border-radius: 0;
         height: 100%;

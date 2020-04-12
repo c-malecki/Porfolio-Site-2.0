@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './styles/ScreenContainer.css';
 
 import MainNavigation from './MainNavigation';
-import MobileNavigation from './MobileNavigation';
 import MobileArrowNav from './MobileArrowNav';
 import LandingBanner from './LandingBanner';
 import AboutMe from './AboutMe';
@@ -74,6 +73,7 @@ class ScreenContainer extends Component {
         } 
     }
     render() {
+        const { displayPage } = this.state;
         return (
             <div className='overflow-frame'>
                 <div className='screen-frame'>
@@ -81,13 +81,11 @@ class ScreenContainer extends Component {
                     <MainNavigation 
                         changePage={this.changePage}
                     />
-                    <MobileNavigation 
-                        changePage={this.changePage}
-                    />
                     <MobileArrowNav 
                         arrowRight={this.arrowRight}
                         arrowLeft={this.arrowLeft}
-                        pageId={this.state.displayPage}
+                        pageId={displayPage}
+                        changePage={this.changePage}
                     />
                 </div>
             </div>

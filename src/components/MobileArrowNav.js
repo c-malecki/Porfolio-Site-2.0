@@ -1,31 +1,19 @@
 import React, { Component } from 'react';
+import MobileNavigation from './MobileNavigation';
 
 class MobileArrowNav extends Component {
+    constructor(props) {
+        super(props);
+        this.handleChangePage = this.handleChangePage.bind(this);
+    }
     handleArrowRight() {
         this.props.arrowRight();
     }
     handleArrowLeft() {
         this.props.arrowLeft();
     }
-    pageTitle() {
-        const { pageId } = this.props;
-        if (pageId === 0) {
-            return (
-                <span>Home</span>
-            )
-        } else if (pageId === 1) {
-            return (
-                <span>About</span>
-            )
-        } else if (pageId === 2) {
-            return (
-                <span>Projects</span>
-            )
-        } else if (pageId === 3) {
-            return (
-                <span>Contact</span>
-            )
-        }
+    handleChangePage(id) {
+        this.props.changePage(id)
     }
     render() {
         const { pageId } = this.props;
@@ -40,7 +28,10 @@ class MobileArrowNav extends Component {
                         {pageId === 0 ? 'X' : '<'}
                     </button>
                     <div className='arrow-nav-page'>
-                        {this.pageTitle()}
+                        <MobileNavigation
+                            pageId={this.props.pageId}
+                            changePage={this.handleChangePage}
+                        />
                     </div>
                     <button
                         className={pageId === 3 ? 'arrow-nav-button end' : 'arrow-nav-button'}

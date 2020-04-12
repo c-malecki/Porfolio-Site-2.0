@@ -1,22 +1,55 @@
 import React, { Component } from 'react';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
 import {NavLink} from 'react-router-dom';
-import logo from '../images/CM.png';
 
 // change links to components and proper react-router
 class MobileNavigation extends Component {
+    constructor(props) {
+        super(props); 
+        this.state = {
+            mobileMenu: false
+        }
+    }
+    toggleMobileMenu() {
+        const { mobileMenu } = this.state;
+        this.setState({
+            mobileMenu: !mobileMenu
+        })
+    }
+    pageTitle() {
+        const { pageId } = this.props;
+        if (pageId === 0) {
+            return (
+                <span>Home</span>
+            )
+        } else if (pageId === 1) {
+            return (
+                <span>About</span>
+            )
+        } else if (pageId === 2) {
+            return (
+                <span>Projects</span>
+            )
+        } else if (pageId === 3) {
+            return (
+                <span>Contact</span>
+            )
+        }
+    }
     handleChangePage(id) {
         this.props.changePage(id)
     }
+    handlePageTitle() {
+        this.props.pageTitle();
+    }
     render() {
+        const { mobileMenu } = this.state;
         return (
             <div className='mobile-nav'>
-                <Navbar style={{background:'black'}} variant="dark" expand="lg">
-                    <Navbar.Brand to="/home"><img src={logo} alt=''/></Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" style={{borderColor:'rgb(255,255,255,0.8)'}}/>
-                    <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="mr-auto">
+                <div className='page-title-menu' onClick={() => this.toggleMobileMenu()}>
+                    {this.pageTitle()}
+                </div>
+                <div className={`mobile-menu${mobileMenu === true ? '-active' : ''}`}>
+                    <div className='mobile-menu-links'>
                         <NavLink 
                             to="/home"
                             onClick={() => this.handleChangePage(0)}
@@ -41,9 +74,8 @@ class MobileNavigation extends Component {
                         >
                             CONTACT
                         </NavLink>
-                    </Nav>
-                    </Navbar.Collapse>
-                </Navbar>
+                    </div>
+                </div>
             </div>
         );
     }

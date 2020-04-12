@@ -66,23 +66,6 @@ only screen and (min-device-width: 0px) and (max-width: 992px) {
         display: none;
     }
 
-    .mobile-nav {
-        display: block;
-        position: fixed;
-        width: 100%;
-        top: 0;
-    }
-
-    .navbar-brand {
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-    }
-
-    .navbar-brand img {
-        width: 40px;
-        height: 40px;
-    }
-
     .active {
         font-size: 16px;
         background-color: transparent;
@@ -91,22 +74,13 @@ only screen and (min-device-width: 0px) and (max-width: 992px) {
         text-decoration: none !important;
     }
 
-    .navbar-nav a {
-        color: white;
-        font-family: 'PressStart2P';
-        padding: 4px 8px;
-    }
-
-    .navbar-nav a:hover {
-        color: rgba(242, 255, 122);
-    }
-
     .mobile-arrow-nav {
         display: block;
         position: fixed;
         text-align: center;
         width: 100%;
-        bottom: 0;
+        top: 0;
+        z-index: 99;
     }
 
     .arrow-nav-container {
@@ -115,11 +89,26 @@ only screen and (min-device-width: 0px) and (max-width: 992px) {
         align-items: center;
         margin: auto;
         background-color: rgba(0, 0, 0);
+        height: 60px;
+        z-index: 99;
     }
 
     .arrow-nav-page {
+        display: flex;
+        align-items: center;
         color: white;
         font-family: 'PressStart2P';
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+    }
+
+    .mobile-nav {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
     }
 
     .arrow-nav-button {
@@ -129,25 +118,68 @@ only screen and (min-device-width: 0px) and (max-width: 992px) {
         background-color: rgba(255, 255, 255, .2);
         border-radius: 10px;
         padding: 4px 8px;
+        z-index: 99;
     }
 
     .end {
-        color: rgb(228, 3, 3)
+        opacity: 0;
+        color: white;
+        z-index: 99;
     }
 
     #left-button {
         margin-right: auto;
+        z-index: 100;
     }
 
     #right-button {
         margin-left: auto;
+        z-index: 99;
     }
 
-    #basic-navbar-nav {
-        text-align: center;
+    .mobile-menu {
+        position: absolute;
+        width: 100%;
+        height: 0;
+        left: 0;
+        top: -90px;
+        transition: .7s;
+        z-index: 95;
     }
 
-    #basic-navbar-nav a {
-        margin: auto;
+    .mobile-menu-active {
+        position: absolute;
+        width: 100%;
+        height: 124px;
+        left: 0;
+        top: 60px;
+        transition: .7s;
+        z-index: 95;
+    }
+
+    .mobile-menu-links {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background: black;
+        width: 100%;
+        padding: 10px 0;
+        transition: .5s;
+        z-index: 95;
+    }
+
+    .mobile-menu-links a {
+        padding: 4px 8px;
+    }
+
+    .page-title-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 152px;
+        border: 2px solid rgba(255, 255, 255, .5);
+        background-color: rgb(94, 94, 94);
+        border-radius: 10px;
+        z-index: 99;
     }
 }
