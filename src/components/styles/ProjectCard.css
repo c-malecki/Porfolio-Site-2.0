@@ -37,6 +37,7 @@
 .card-description {
     position: relative;
     font-weight: 500;
+    font-size: 14px;
     bottom: 100px;
     text-align: center;
     color: white;

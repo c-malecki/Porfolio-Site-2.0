@@ -15,19 +15,19 @@ class Projects extends Component {
                                 pic={PoD}
                                 title='PoD Character Calculator'
                                 titleId={1}
-                                description={`Calculator designed to mimic Path of Diablo's UI. Also reconstructs game's logic for formulas.` }
+                                description={`Work in progress - Complex calculator built with MERN stack that recreates Path of Diablo's game logic and assets.` }
                                 descriptionId={1}
                                 github='https://github.com/c-malecki/PodCharCalculator'
-                                codesandbox='https://codesandbox.io/s/github/c-malecki/PoDCharCalculator'
+                                demo='https://upbeat-fermat-730cf7.netlify.com/'
                             />
                             <ProjectCard 
                                 pic={FTA}
                                 title='Financial Tracker App'
                                 titleId={2}
-                                description='Personal finance tracker similar to banking app. Uses React, React-Router, Redux, Formik, Yup, Bootstrap.'
+                                description='Work in progress - Personal finance tracker similar to banking app. Uses React, React-Router, Redux, Formik, Yup, Bootstrap.'
                                 descriptionId={2}
                                 github='https://github.com/c-malecki/FinancialTrackerApp'
-                                codesandbox='https://codesandbox.io/s/github/c-malecki/FinancialTrackerApp'
+                                demo='https://codesandbox.io/s/github/c-malecki/FinancialTrackerApp'
                             />
                         </div>
                     </div>

@@ -3,7 +3,7 @@ import './styles/ProjectCard.css';
 
 class ProjectCard extends Component {
     render() {
-        const { title, description, github, codesandbox, pic, titleId, descriptionId } = this.props
+        const { title, description, github, demo, pic, titleId, descriptionId } = this.props
         return (
             <div className='project-card-container'>
                     <div className='card-image'>
@@ -17,7 +17,7 @@ class ProjectCard extends Component {
                     </div>
                     <div className='card-links'>
                         <a href={github} target='_blank' rel="noopener noreferrer">GitHub</a>
-                        <a href={codesandbox} target='_blank' rel="noopener noreferrer">CodeSandBox</a>
+                        <a href={demo} target='_blank' rel="noopener noreferrer">Demo</a>
                     </div>
             </div>
         );
