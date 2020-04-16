@@ -18,7 +18,7 @@ class Projects extends Component {
                                 description={`Work in progress - Complex calculator built with MERN stack that recreates Path of Diablo's game logic and assets.` }
                                 descriptionId={1}
                                 github='https://github.com/c-malecki/PodCharCalculator'
-                                demo='https://upbeat-fermat-730cf7.netlify.com/'
+                                demo='https://podcc.netlify.app/'
                             />
                             <ProjectCard 
                                 pic={FTA}
