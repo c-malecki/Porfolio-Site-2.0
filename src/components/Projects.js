@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ProjectCard from "./ProjectCard";
-import PoD from "./../images/PoD.png";
+import Lod from "./../images/Lod.png";
 import FTA from "./../images/FinancialTrackerApp.png";
 import Flo from "./../images/floswhistle.png";
 import "./styles/Projects.css";
@@ -22,13 +22,13 @@ class Projects extends Component {
                 demo="https://beta.floswhistle.org"
               />
               <ProjectCard
-                pic={PoD}
-                title="PoD Character Calculator"
+                pic={Lod}
+                title="Diablo II Character Calculator"
                 titleId={1}
-                description={`Complex calculator built with MERN stack that recreates Path of Diablo's game logic and assets.`}
+                description={`Complex calculator built with MERN stack that recreates Diablo II's game logic and UI.`}
                 descriptionId={1}
                 github="https://github.com/c-malecki/pod-character-calculator"
-                demo="https://podcc.netlify.app/"
+                demo="https://diabloii-cc.netlify.app/"
               />
               <ProjectCard
                 pic={FTA}
