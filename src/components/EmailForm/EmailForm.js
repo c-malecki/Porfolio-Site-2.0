@@ -22,7 +22,7 @@ export class EmailForm extends Component {
       message: this.state.message,
     };
     axios
-      .post("http://localhost:4444/email", data)
+      .post("https://portfoliosite-email-server.herokuapp.com/email", data)
       .then((res) => {
         this.setState({ sent: true }, this.resetForm());
       })
