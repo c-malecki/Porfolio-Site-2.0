@@ -1,0 +1,27 @@
+.traditional-footer {
+  display: flex;
+  flex-direction: column;
+  height: 6rem;
+  padding: 2rem 0;
+  background-color: $traditional-black;
+  margin-top: 2rem;
+
+  .footer-icons {
+    margin: auto;
+    i {
+      color: white;
+      margin: auto 1rem;
+      font-size: 3rem;
+    }
+
+    @media (hover: hover) {
+      i:hover {
+        color: $ui-yellow;
+      }
+    }
+  }
+  span {
+    color: white;
+    margin: auto;
+  }
+}

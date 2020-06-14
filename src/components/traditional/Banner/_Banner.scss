@@ -1,0 +1,13 @@
+.tradition-banner {
+  height: 70vh;
+  background-color: $traditional-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,55 @@
+.mobile-navigation-container {
+  display: none;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 992px),
+  only screen and (min-device-width: 0px) and (max-width: 992px) {
+  .mobile-navigation-z {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    .mobile-navigation-container {
+      z-index: 12;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 56px;
+      display: flex;
+      background-color: black;
+
+      button {
+        height: 2.5rem;
+        width: 2.5rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border: 2px solid $border-gray;
+        border-radius: 6px;
+        background-color: rgb(70, 70, 70);
+        color: white;
+      }
+
+      #left {
+        margin-top: 0.5rem;
+        margin-right: auto;
+        margin-left: 0.5rem;
+      }
+
+      #right {
+        margin-top: 0.5rem;
+        margin-right: 0.5rem;
+        margin-left: auto;
+      }
+
+      #menu {
+        height: 2.8rem;
+        width: 2.8rem;
+        margin-top: 0.35rem;
+        i {
+          color: white;
+          font-size: 1.6rem;
+          position: relative;
+        }
+      }
+    }
+  }
+}
