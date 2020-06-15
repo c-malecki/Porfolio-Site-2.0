@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import { AppContext } from "../../../context/AppContext";
 import { Link } from "react-router-dom";
 import profile from "../../../assets/images/biggerprofile.png";
+import { AppContext } from "../../../context/AppContext";
 
 export const About = () => {
-  const { changeLayout } = useContext(AppContext);
+  const { changePage } = useContext(AppContext);
   return (
     <div className="traditional-about" id="about">
       <h2 className="section-heading">About</h2>
@@ -17,7 +17,7 @@ export const About = () => {
           <span className="about-text">
             I am a musician, lover of games, and I enjoy pushing the boundaries
             of creativity and logic. Be sure to check out my{" "}
-            <Link to="/fun" onClick={() => changeLayout()}>
+            <Link to="/fun" onClick={() => changePage(0)}>
               alternate layout
             </Link>{" "}
             theme to see what I mean!

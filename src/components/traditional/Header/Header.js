@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { TraditionalMobileMenu } from "../../index";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
+import { AppContext } from "../../../context/AppContext";
 
 export const Header = () => {
+  const { changePage } = useContext(AppContext);
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -13,7 +15,10 @@ export const Header = () => {
       <div className="header-container">
         <div className="toggle-container">
           <span>
-            Make it <Link to="/fun">fun!</Link>
+            Make it{" "}
+            <Link to="/fun" onClick={() => changePage(0)}>
+              fun!
+            </Link>
           </span>
         </div>
         <div className="hash-links-container">
