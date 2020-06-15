@@ -12,4 +12,5 @@ export * from "./traditional/About/About";
 export * from "./traditional/Projects/Projects";
 export * from "./traditional/ProjectCard/TraditionalProjectCard";
 export * from "./traditional/Contact/Contact";
+export * from "./traditional/EmailForm/TraditionalEmailForm";
 export * from "./traditional/Footer/Footer";

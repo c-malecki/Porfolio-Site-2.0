@@ -5,20 +5,11 @@ export const AppContext = createContext();
 
 export class AppContextProvider extends Component {
   state = {
-    layout: false,
     page: 0,
-    toggle: 0,
     projects: projects,
-  };
-  changeLayout = () => {
-    const { layout } = this.state;
-    this.setState({ layout: !layout });
   };
   changePage = (id) => {
     this.setState({ page: id });
-  };
-  changeToggle = (val) => {
-    this.setState({ toggle: val });
   };
   render() {
     return (

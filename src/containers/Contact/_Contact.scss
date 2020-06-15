@@ -1,23 +1,23 @@
 .contact-background {
   height: 100%;
   width: 100%;
-}
 
-.contact-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 
-.contact-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-  height: 80%;
+    .contact-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      height: 80%;
+    }
+  }
 }
 
 .contact-heading {
@@ -27,31 +27,18 @@
   line-height: 1.4;
 }
 
-.contact-list,
 .contact-social {
   display: flex;
   flex-direction: row;
   align-items: center;
   color: black;
-}
 
-.contact-list i {
-  font-size: 50px;
-  padding-right: 1rem;
-  color: white;
-}
-
-.contact-list span {
-  font-size: 28px;
-  color: white;
-  font-family: "Pxlvetica";
-}
-
-.contact-social i {
-  color: white;
-  font-size: 5em;
-  padding: 8px;
-  cursor: pointer;
+  i {
+    color: white;
+    font-size: 5em;
+    padding: 8px;
+    cursor: pointer;
+  }
 }
 
 @media (hover: hover) {
@@ -80,14 +67,6 @@
     background-color: transparent;
   }
 
-  .contact-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 80%;
-  }
-
   .contact-column {
     display: flex;
     flex-direction: column;
@@ -98,16 +77,6 @@
 
   .contact-heading h2 {
     font-size: 1rem;
-  }
-
-  .contact-list i {
-    font-size: 30px;
-    padding-right: 1rem;
-    color: white;
-  }
-
-  .contact-list span {
-    font-size: 22px;
   }
 
   .contact-social i {

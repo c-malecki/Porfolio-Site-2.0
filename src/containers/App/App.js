@@ -1,15 +1,14 @@
-import React, { useContext } from "react";
+import React from "react";
 import { ScreenContainer, TraditionalPage } from "../index";
-import { BrowserRouter } from "react-router-dom";
-import { AppContext } from "../../context/AppContext";
+import { Switch, Route } from "react-router-dom";
 
 export const App = () => {
-  const { layout } = useContext(AppContext);
   return (
     <div className="App">
-      <BrowserRouter>
-        {layout === true ? <ScreenContainer /> : <TraditionalPage />}
-      </BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={TraditionalPage} />
+        <Route path="/fun" component={ScreenContainer} />
+      </Switch>
     </div>
   );
 };

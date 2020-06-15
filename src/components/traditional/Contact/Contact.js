@@ -1,5 +1,5 @@
 import React from "react";
-import { EmailForm } from "../../index";
+import { TraditionalEmailForm } from "../../index";
 
 export const Contact = () => {
   return (
@@ -11,7 +11,7 @@ export const Contact = () => {
           feedback. I'd be happy to hear from you.
         </span>
         <div className="contact-form-container">
-          <EmailForm />
+          <TraditionalEmailForm />
         </div>
       </div>
     </div>

@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { AppContext } from "../../context/AppContext";
-import { ToggleSwitch } from "../index";
 
 export const MobileMenu = (props) => {
   const { changePage } = useContext(AppContext);
@@ -14,22 +13,22 @@ export const MobileMenu = (props) => {
       <div
         className={`mobile-menu-links${props.isOpen ? " is-open-menu" : ""}`}
       >
-        <NavLink to="/home" onClick={() => changePage(0)}>
+        <NavLink to="/fun" onClick={() => changePage(0)}>
           HOME
         </NavLink>
-        <NavLink to="/about" onClick={() => changePage(1)}>
+        <NavLink to="/fun/about" onClick={() => changePage(1)}>
           ABOUT
         </NavLink>
-        <NavLink to="/projects" onClick={() => changePage(2)}>
+        <NavLink to="/fun/projects" onClick={() => changePage(2)}>
           PROJECTS
         </NavLink>
-        <NavLink to="/contact" onClick={() => changePage(3)}>
+        <NavLink to="/fun/contact" onClick={() => changePage(3)}>
           CONTACT
         </NavLink>
-        <div className="toggleswitch-mobile-menu">
-          <span>Back to boring!</span>
-          <ToggleSwitch />
-        </div>
+
+        <span>
+          <Link to="/">Traditional</Link>
+        </span>
       </div>
     </div>
   );

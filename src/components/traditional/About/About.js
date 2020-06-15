@@ -1,8 +1,10 @@
-import React from "react";
-import { HashLink as Link } from "react-router-hash-link";
+import React, { useContext } from "react";
+import { AppContext } from "../../../context/AppContext";
+import { Link } from "react-router-dom";
 import profile from "../../../assets/images/biggerprofile.png";
 
 export const About = () => {
+  const { changeLayout } = useContext(AppContext);
   return (
     <div className="traditional-about" id="about">
       <h2 className="section-heading">About</h2>
@@ -15,7 +17,7 @@ export const About = () => {
           <span className="about-text">
             I am a musician, lover of games, and I enjoy pushing the boundaries
             of creativity and logic. Be sure to check out my{" "}
-            <Link smooth to="/#toggle">
+            <Link to="/fun" onClick={() => changeLayout()}>
               alternate layout
             </Link>{" "}
             theme to see what I mean!

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-export class EmailForm extends Component {
+export class TraditionalEmailForm extends Component {
   state = {
     name: "",
     message: "",
@@ -38,23 +38,23 @@ export class EmailForm extends Component {
   };
   render() {
     return (
-      <form className="email-form" onSubmit={(e) => this.formSubmit(e)}>
-        <div className="name-input-container">
+      <form className="email-form-t" onSubmit={(e) => this.formSubmit(e)}>
+        <div className="name-input-container-t">
           <input
             onChange={(e) => this.setState({ name: e.target.value })}
             name="name"
-            className="name-input"
+            className="name-input-t"
             type="text"
             placeholder="Name"
             value={this.state.name}
           />
         </div>
 
-        <div className="your-email-container">
+        <div className="your-email-container-t">
           <input
             onChange={(e) => this.setState({ email: e.target.value })}
             name="email"
-            className="your-email"
+            className="your-email-t"
             type="email"
             placeholder="your@email.com"
             required
@@ -62,11 +62,11 @@ export class EmailForm extends Component {
           />
         </div>
 
-        <div className="message-input-container">
+        <div className="message-input-container-t">
           <textarea
             onChange={(e) => this.setState({ message: e.target.value })}
             name="message"
-            className="message-input"
+            className="message-input-t"
             type="text"
             placeholder="Your message"
             value={this.state.message}
@@ -74,8 +74,8 @@ export class EmailForm extends Component {
           />
         </div>
 
-        <div className="email-button-container">
-          <button type="submit" className="email-submit-button">
+        <div className="email-button-container-t">
+          <button type="submit" className="email-submit-button-t">
             {this.state.buttonText}
           </button>
         </div>

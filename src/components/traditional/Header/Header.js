@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { ToggleSwitch, TraditionalMobileMenu } from "../../index";
-import { HashLink as Link } from "react-router-hash-link";
+import { TraditionalMobileMenu } from "../../index";
+import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,24 +11,25 @@ export const Header = () => {
   return (
     <div className="header-z">
       <div className="header-container">
-        <div className="toggle-container" id="toggle">
-          <span>Make it fun!</span>
-          <ToggleSwitch />
+        <div className="toggle-container">
+          <span>
+            Make it <Link to="/fun">fun!</Link>
+          </span>
         </div>
         <div className="hash-links-container">
           <div className="hash-links-menu">
-            <Link smooth to="/#home">
+            <HashLink smooth to="/#home">
               Home
-            </Link>
-            <Link smooth to="/#about">
+            </HashLink>
+            <HashLink smooth to="/#about">
               About
-            </Link>
-            <Link smooth to="/#projects">
+            </HashLink>
+            <HashLink smooth to="/#projects">
               Projects
-            </Link>
-            <Link smooth to="/#contact">
+            </HashLink>
+            <HashLink smooth to="/#contact">
               Contact
-            </Link>
+            </HashLink>
           </div>
         </div>
         <div className="traditional-mobile-menu-container">
@@ -40,18 +42,18 @@ export const Header = () => {
         }`}
       >
         <div className={`hash-links-menu-mobile ${isOpen ? "open-menu" : ""}`}>
-          <Link smooth to="/#home">
+          <HashLink smooth to="/#home">
             Home
-          </Link>
-          <Link smooth to="/#about">
+          </HashLink>
+          <HashLink smooth to="/#about">
             About
-          </Link>
-          <Link smooth to="/#projects">
+          </HashLink>
+          <HashLink smooth to="/#projects">
             Projects
-          </Link>
-          <Link smooth to="/#contact">
+          </HashLink>
+          <HashLink smooth to="/#contact">
             Contact
-          </Link>
+          </HashLink>
         </div>
       </div>
     </div>

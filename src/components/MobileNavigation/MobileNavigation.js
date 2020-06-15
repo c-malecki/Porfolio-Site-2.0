@@ -12,13 +12,11 @@ export const MobileNavigation = () => {
   };
   const arrowRight = () => {
     if (page === 0) {
-      history.push("/about");
+      history.push("/fun/about");
     } else if (page === 1) {
-      history.push("/projects");
+      history.push("/fun/projects");
     } else if (page === 2) {
-      history.push("/contact");
-    } else {
-      history.push("/home");
+      history.push("/fun/contact");
     }
     let pageId = page;
     pageId = pageId < 3 ? ++pageId : pageId;
@@ -26,11 +24,11 @@ export const MobileNavigation = () => {
   };
   const arrowLeft = () => {
     if (page === 3) {
-      history.push("/projects");
+      history.push("/fun/projects");
     } else if (page === 2) {
-      history.push("/about");
+      history.push("/fun/about");
     } else if (page === 1) {
-      history.push("/home");
+      history.push("/fun");
     }
     let pageId = page;
     pageId = pageId > 0 ? --pageId : pageId;

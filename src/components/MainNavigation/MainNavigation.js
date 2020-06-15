@@ -1,44 +1,40 @@
 import React, { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { AppContext } from "../../context/AppContext";
-import { ToggleSwitch } from "../index";
 
 export const MainNavigation = () => {
   const { changePage } = useContext(AppContext);
-  const handleChangePage = (id) => {
-    changePage(id);
-  };
   return (
     <div className="main-nav">
       <span>
-        Traditional <ToggleSwitch />
+        <Link to="/">Traditional</Link>
       </span>
-
       <NavLink
-        to="/home"
-        onClick={() => handleChangePage(0)}
+        exact
+        to="/fun"
         className="main-nav-link"
+        onClick={() => changePage(0)}
       >
         HOME
       </NavLink>
       <NavLink
-        to="/about"
-        onClick={() => handleChangePage(1)}
+        to="/fun/about"
         className="main-nav-link"
+        onClick={() => changePage(1)}
       >
         ABOUT
       </NavLink>
       <NavLink
-        to="/projects"
-        onClick={() => handleChangePage(2)}
+        to="/fun/projects"
         className="main-nav-link"
+        onClick={() => changePage(2)}
       >
         PROJECTS
       </NavLink>
       <NavLink
-        to="/contact"
-        onClick={() => handleChangePage(3)}
+        to="/fun/contact"
         className="main-nav-link"
+        onClick={() => changePage(3)}
       >
         CONTACT
       </NavLink>

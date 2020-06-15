@@ -25,13 +25,10 @@
         z-index: 4;
       }
 
-      input[type="range"] {
-        margin: 0.2rem auto;
-        z-index: 5;
-      }
-      input[type="range"]::-webkit-slider-thumb {
-        background-color: $traditional-blue;
-        z-index: 5;
+      a {
+        text-decoration: none;
+        font-weight: bold;
+        color: $traditional-blue;
       }
     }
 
