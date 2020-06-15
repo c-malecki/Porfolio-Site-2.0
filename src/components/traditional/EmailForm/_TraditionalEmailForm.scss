@@ -32,7 +32,7 @@
     display: flex;
     .email-submit-button-t {
       margin: auto;
-      background: transparent;
+      background: rgb(209, 209, 209);
       border: 2px solid $traditional-black;
       border-radius: 4px;
       text-transform: uppercase;
@@ -43,7 +43,7 @@
 
     @media (hover: hover) {
       .email-submit-button-t:hover {
-        background: $ui-yellow;
+        background: $traditional-blue;
       }
     }
   }

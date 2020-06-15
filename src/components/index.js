@@ -2,7 +2,6 @@ export * from "./ProjectCard/ProjectCard";
 export * from "./MainNavigation/MainNavigation";
 export * from "./MobileNavigation/MobileNavigation";
 export * from "./MobileMenu/MobileMenu";
-export * from "./ToggleSwitch/ToggleSwitch";
 export * from "./EmailForm/EmailForm";
 // traditional
 export * from "./traditional/Header/Header";
