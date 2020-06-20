@@ -1,5 +1,5 @@
 import Lod from "../assets/images/Lod.png";
-import FTA from "../assets/images/FinancialTrackerApp.png";
+// import FTA from "../assets/images/FinancialTrackerApp.png";
 import Flo from "../assets/images/floswhistle.png";
 
 export const projects = [
@@ -25,15 +25,28 @@ export const projects = [
     github: "https://github.com/c-malecki/pod-character-calculator",
     demo: "https://diabloii-cc.netlify.app/",
   },
-  {
-    pic: FTA,
-    alt: "Financial Tracker Application",
-    title: "Financial Tracker App",
-    titleId: 2,
-    description:
-      "Personal finance tracker similar to banking app. Uses React, React-Router, Redux, Formik, Yup, Bootstrap.",
-    descriptionId: 2,
-    github: "https://github.com/c-malecki/FinancialTrackerApp",
-    demo: "https://codesandbox.io/s/github/c-malecki/FinancialTrackerApp",
-  },
+  // {
+  //   pic: FTA,
+  //   alt: "Financial Tracker Application",
+  //   title: "Financial Tracker App",
+  //   titleId: 2,
+  //   description:
+  //     "Personal finance tracker similar to banking app. Uses React, React-Router, Redux, Formik, Yup, Bootstrap.",
+  //   descriptionId: 2,
+  //   github: "https://github.com/c-malecki/FinancialTrackerApp",
+  //   demo: "https://codesandbox.io/s/github/c-malecki/FinancialTrackerApp",
+  // },
 ];
+
+
+// {
+//   pic: FTA,
+//   alt: "Financial Tracker Application",
+//   title: "Financial Tracker App",
+//   titleId: 2,
+//   description:
+//     "Personal finance tracker similar to banking app. Uses React, React-Router, Redux, Formik, Yup, Bootstrap.",
+//   descriptionId: 2,
+//   github: "https://github.com/c-malecki/FinancialTrackerApp",
+//   demo: "https://codesandbox.io/s/github/c-malecki/FinancialTrackerApp",
+// },
