@@ -1,17 +1,34 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { TraditionalMobileMenu } from "../../index";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 import { AppContext } from "../../../context/AppContext";
 
 export const Header = () => {
-  const { changePage } = useContext(AppContext);
   const [isOpen, setIsOpen] = useState(false);
+
+  const { changePage, changeToFixed, toFixed } = useContext(AppContext);
+  useEffect(() => {
+    const handleYScroll = () => {
+      const targetPos = document.getElementById("about").offsetTop;
+      const curPosition = window.pageYOffset;
+      if (curPosition > targetPos) {
+        changeToFixed(true);
+      } else if (curPosition < targetPos) {
+        changeToFixed(false);
+      }
+    };
+    window.addEventListener("scroll", handleYScroll);
+    return () => {
+      window.removeEventListener("scroll", handleYScroll);
+    };
+  }, []);
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="header-z">
+    <div className={`header-z ${toFixed ? "fixed" : ""}`}>
       <div className="header-container">
         <div className="toggle-container">
           <span>
