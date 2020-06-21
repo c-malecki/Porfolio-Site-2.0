@@ -1,12 +1,16 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import profile from "../../../assets/images/biggerprofile.png";
 import { AppContext } from "../../../context/AppContext";
 
 export const About = () => {
-  const { changePage } = useContext(AppContext);
+  const { changePage, getRef } = useContext(AppContext);
+  const about = useRef();
+  useEffect(() => {
+    getRef(about.current);
+  }, []);
   return (
-    <div className="traditional-about" id="about">
+    <div className="traditional-about" id="about" ref={about}>
       <h2 className="section-heading">{`< About />`}</h2>
       <div className="traditional-about-row">
         <div className="traditional-about-col">
@@ -32,8 +36,9 @@ export const About = () => {
           </span>
           <h3 className="sub-heading">What do I make?</h3>
           <span className="about-text">
-            All kinds of applications. React is my preference, but I enjoy the challenge of learning different technologies. New problems 
-            present new learning opportunities. It's the reason why I have such a
+            All kinds of applications. React is my preference, but I enjoy the
+            challenge of learning different technologies. New problems present
+            new learning opportunities. It's the reason why I have such a
             passion for programming.
           </span>
         </div>

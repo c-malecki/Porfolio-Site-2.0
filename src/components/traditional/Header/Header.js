@@ -7,22 +7,18 @@ import { AppContext } from "../../../context/AppContext";
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const { changePage, changeToFixed, toFixed } = useContext(AppContext);
+  const { changePage, changeToFixed, toFixed, elRef } = useContext(AppContext);
   useEffect(() => {
     const handleYScroll = () => {
-      const targetPos = document.getElementById("about").offsetTop;
+      const targetPos = elRef.offsetTop;
       const curPosition = window.pageYOffset;
-      if (curPosition > targetPos) {
-        changeToFixed(true);
-      } else if (curPosition < targetPos) {
-        changeToFixed(false);
-      }
+      changeToFixed(curPosition > targetPos);
     };
     window.addEventListener("scroll", handleYScroll);
     return () => {
       window.removeEventListener("scroll", handleYScroll);
     };
-  }, []);
+  }, [elRef]);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);

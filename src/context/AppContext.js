@@ -8,6 +8,7 @@ export const AppContextProvider = ({ children }) => {
     page: 0,
     projects: projects,
     toFixed: false,
+    elRef: null,
   });
   const changePage = (id) => {
     setAppState((prevState) => ({ ...prevState, page: id }));
@@ -15,12 +16,16 @@ export const AppContextProvider = ({ children }) => {
   const changeToFixed = (bool) => {
     setAppState((prevState) => ({ ...prevState, toFixed: bool }));
   };
+  const getRef = (ref) => {
+    setAppState((prevState) => ({ ...prevState, elRef: ref }));
+  };
   return (
     <AppContext.Provider
       value={{
         ...appState,
         changePage: changePage,
         changeToFixed: changeToFixed,
+        getRef: getRef,
       }}
     >
       {children}
