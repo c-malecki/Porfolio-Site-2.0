@@ -36,6 +36,12 @@
           font-weight: bold;
           color: $traditional-blue;
         }
+
+        @media (hover: hover) {
+          a:hover {
+            color: $traditional-d-blue;
+          }
+        }
       }
     }
   }

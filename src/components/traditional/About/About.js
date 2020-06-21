@@ -7,7 +7,7 @@ export const About = () => {
   const { changePage } = useContext(AppContext);
   return (
     <div className="traditional-about" id="about">
-      <h2 className="section-heading">About</h2>
+      <h2 className="section-heading">{`< About />`}</h2>
       <div className="traditional-about-row">
         <div className="traditional-about-col">
           <h3 className="sub-heading">Who am I?</h3>
@@ -32,8 +32,8 @@ export const About = () => {
           </span>
           <h3 className="sub-heading">What do I make?</h3>
           <span className="about-text">
-            All kinds of applications. I enjoy the challenge of solving problems
-            and learning new technologies. It's the reason why I have such a
+            All kinds of applications. React is my preference, but I enjoy the challenge of learning different technologies. New problems 
+            present new learning opportunities. It's the reason why I have such a
             passion for programming.
           </span>
         </div>

@@ -4,7 +4,7 @@ import { TraditionalEmailForm } from "../../index";
 export const Contact = () => {
   return (
     <div className="traditional-contact" id="contact">
-      <h2 className="section-heading">Contact</h2>
+      <h2 className="section-heading">{`< Contact />`}</h2>
       <div className="traditional-contact-row">
         <span>
           Do you like what you see? Shoot me a message with any questions or

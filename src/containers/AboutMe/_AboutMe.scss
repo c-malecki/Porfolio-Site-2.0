@@ -13,37 +13,42 @@
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
-      background-color: $bg-black;
-      border: 3px solid $border-gray;
-      border-radius: 20px;
       padding: 10px;
-      margin-top: 50px;
-
-      .portrait {
-        background: url(../../assets/images/Portrait.png) center/cover no-repeat;
-        height: 247px;
-        width: 247px;
-        background-color: $bg-black;
-        border: 3px solid $border-gray;
-        border-radius: 20px;
-        margin: 5px;
-      }
+      margin-top: 20px;
+      width: calc(100% / 1.2);
 
       .blurb {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
         font-family: "PressStart2P";
-        font-size: 16px;
-        color: white;
         background-color: $bg-black;
         border: 3px solid $border-gray;
         border-radius: 20px;
         padding: 4px;
-        height: 307px;
-        width: 297px;
-        margin: 5px;
-        line-height: 1.4;
+        height: auto;
+        width: auto;
+        margin: 0.5rem;
+
+        .portrait {
+          height: 247px;
+          width: 247px;
+          background-color: $bg-black;
+          border: 3px solid $border-gray;
+          border-radius: 20px;
+          margin: 1rem;
+          float: left;
+        }
+
+        h3 {
+          color: white;
+          padding: 0 0.5rem;
+          text-align: center;
+        }
+
+        p {
+          font-size: 16px;
+          color: white;
+          line-height: 1.4;
+          padding: 0.5rem;
+        }
       }
     }
   }
@@ -57,23 +62,20 @@
     .about-row {
       margin-top: 0px !important;
       margin-bottom: 50px;
-      border: none;
-      border-radius: 0;
-      height: 100%;
-      width: 100%;
+      height: auto;
       overflow-y: auto;
-      border: none !important;
-      background-color: transparent !important;
+    }
+  }
+}
 
-      .portrait {
-        height: 197px;
-        width: 197px;
-      }
-
-      .blurb {
-        height: 297px;
-        width: 297px;
-      }
+@media only screen and (min-width: 0px) and (max-width: 610px),
+  only screen and (min-device-width: 0px) and (max-width: 610px) {
+  .about-row {
+    width: 100% !important;
+    .portrait {
+      float: none !important;
+      margin: 0.5rem auto !important;
+      display: block;
     }
   }
 }

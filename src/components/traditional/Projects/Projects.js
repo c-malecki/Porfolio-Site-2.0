@@ -6,7 +6,7 @@ export const Projects = () => {
   const { projects } = useContext(AppContext);
   return (
     <div className="traditional-projects" id="projects">
-      <h2 className="section-heading">Projects</h2>
+      <h2 className="section-heading">{`< Projects />`}</h2>
       <div className="traditional-projectcard-container">
         {projects.map((project) => (
           <TraditionalProjectCard
