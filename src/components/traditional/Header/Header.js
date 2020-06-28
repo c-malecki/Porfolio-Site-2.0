@@ -18,7 +18,7 @@ export const Header = () => {
     return () => {
       window.removeEventListener("scroll", handleYScroll);
     };
-  }, [elRef]);
+  }, [elRef, changeToFixed]);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);

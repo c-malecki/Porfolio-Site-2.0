@@ -8,7 +8,7 @@ export const About = () => {
   const about = useRef();
   useEffect(() => {
     getRef(about.current);
-  }, []);
+  }, [getRef]);
   return (
     <div className="traditional-about" id="about" ref={about}>
       <h2 className="section-heading">{`< About />`}</h2>
