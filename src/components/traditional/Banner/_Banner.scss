@@ -5,13 +5,25 @@
   justify-content: center;
   align-items: center;
 
-  span {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
+  .banner-inner-container {
+    position: relative;
+    height: 70vh;
+    width: 70%;
+    background-color: black;
   }
 }
 
 .adjustToHeader {
   margin-top: 80px;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 992px),
+  only screen and (min-device-width: 0px) and (max-width: 992px) {
+  .tradition-banner {
+    height: 50vh;
+    .banner-inner-container {
+      height: 50vh;
+      width: 100%;
+    }
+  }
 }
