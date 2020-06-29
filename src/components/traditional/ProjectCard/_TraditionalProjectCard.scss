@@ -135,27 +135,30 @@
 
 @media only screen and (min-width: 0px) and (max-width: 992px),
   only screen and (min-device-width: 0px) and (max-width: 992px) {
-  .t-mobile-title {
-    display: block !important;
-    text-align: center;
-    font-weight: bold;
-    color: $traditional-black;
-  }
+  .t-project-card-container {
+    .t-mobile-title {
+      display: block;
+      text-align: center;
+      font-weight: bold;
+      color: $traditional-black;
+    }
 
-  .t-title-background {
-    display: none;
-  }
+    .t-title-background {
+      display: none;
+    }
 
-  .t-description-background {
-    display: none;
-  }
+    .t-description-background {
+      display: none;
+    }
 
-  .t-card-links {
-    opacity: 1 !important;
-    bottom: 50px !important;
+    .t-card-links {
+      opacity: 1;
+      bottom: 50px;
 
-    a {
-      opacity: 1 !important;
+      a {
+        opacity: 1;
+        z-index: 1;
+      }
     }
   }
 }

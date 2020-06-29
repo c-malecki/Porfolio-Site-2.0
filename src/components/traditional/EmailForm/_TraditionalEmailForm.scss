@@ -10,9 +10,10 @@
     .your-email-t {
       height: 1.4rem;
       width: 18rem;
-      background: $traditional-black;
-      color: white;
+      background: $traditional-off-white;
+      color: $traditional-black;
       margin: auto;
+      border: 2px solid $traditional-black;
     }
   }
 
@@ -22,9 +23,10 @@
     .message-input-t {
       width: 18rem;
       height: 6rem;
-      background: $traditional-black;
-      color: white;
+      background: $traditional-off-white;
+      color: $traditional-black;
       margin: auto;
+      border: 2px solid $traditional-black;
     }
   }
 
@@ -32,7 +34,7 @@
     display: flex;
     .email-submit-button-t {
       margin: auto;
-      background: rgb(209, 209, 209);
+      background: $traditional-off-white;
       border: 2px solid $traditional-black;
       border-radius: 4px;
       text-transform: uppercase;

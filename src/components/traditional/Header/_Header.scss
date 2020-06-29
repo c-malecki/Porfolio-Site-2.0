@@ -68,6 +68,7 @@
 @media only screen and (min-width: 0px) and (max-width: 992px),
   only screen and (min-device-width: 0px) and (max-width: 992px) {
   .header-z {
+    z-index: 2;
     .toggle-container {
       display: none;
     }
@@ -113,7 +114,7 @@
       transform: translateY(0px);
       transition: 0.7s;
       background-color: $traditional-black;
-      z-index: 2;
+      z-index: 3;
 
       .open-menu {
         position: relative;
@@ -122,7 +123,7 @@
         justify-content: center;
         align-items: center;
         height: 14rem;
-        z-index: 2;
+        z-index: 3;
 
         a {
           position: relative;
@@ -132,7 +133,7 @@
           color: white;
           font-size: 1.2rem;
           font-weight: bold;
-          z-index: 2;
+          z-index: 3;
         }
       }
     }

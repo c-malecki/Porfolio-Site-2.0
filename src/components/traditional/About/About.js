@@ -32,14 +32,16 @@ export const About = () => {
           <span className="about-text">
             I am a Fullstack Developer. The frontend is my origin where I
             express creativity in dynamic, responsive, and intuitive UI/UX, but
-            I like working on all aspects of an application.
+            I like working on all aspects of an application, including
+            databases, web servers, and APIs.
           </span>
           <h3 className="sub-heading">What do I make?</h3>
           <span className="about-text">
-            All kinds of applications. React is my preference, but I enjoy the
-            challenge of learning different technologies. New problems present
-            new learning opportunities. It's the reason why I have such a
-            passion for programming.
+            All kinds of applications from civic tech or social media to gaming
+            tools. React is my framework of choice, but I enjoy the challenge of
+            learning different technologies. New problems present new learning
+            opportunities. It's the reason why I have such a passion for
+            programming.
           </span>
         </div>
       </div>
