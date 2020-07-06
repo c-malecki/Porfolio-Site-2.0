@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { AppContext } from "../../../context/AppContext";
-import { TraditionalProjectCard } from "../../index";
+import { ProjectCard } from "../../index";
 
 export const Projects = () => {
   const { projects } = useContext(AppContext);
@@ -9,7 +9,7 @@ export const Projects = () => {
       <h2 className="section-heading">{`< Projects />`}</h2>
       <div className="traditional-projectcard-container">
         {projects.map((project) => (
-          <TraditionalProjectCard
+          <ProjectCard
             pic={project.pic}
             alt={project.alt}
             title={project.title}

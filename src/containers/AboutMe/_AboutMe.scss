@@ -68,26 +68,49 @@
 
 @media only screen and (min-width: 0px) and (max-width: 992px),
   only screen and (min-device-width: 0px) and (max-width: 992px) {
-  .about-content {
-    height: 100%;
+  .about-background {
+    .about-content {
+      height: 100%;
 
-    .about-row {
-      margin-top: 0px !important;
-      margin-bottom: 50px;
-      height: auto;
-      overflow-y: auto;
+      .about-row {
+        margin-top: 0px;
+        margin-bottom: 50px;
+        height: auto;
+        overflow-y: auto;
+      }
     }
   }
 }
 
 @media only screen and (min-width: 0px) and (max-width: 610px),
   only screen and (min-device-width: 0px) and (max-width: 610px) {
-  .about-row {
-    width: 100% !important;
-    .portrait {
-      float: none !important;
-      margin: 0.5rem auto !important;
-      display: block;
+  .about-background {
+    .about-content {
+      .about-row {
+        width: 100%;
+        .blurb {
+          .portrait {
+            float: none;
+            margin: 0.5rem auto;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .about-background {
+    .about-content {
+      height: 100%;
+
+      .about-row {
+        margin-top: 0px;
+        margin-bottom: 100px;
+        height: 100%;
+        width: 100%;
+      }
     }
   }
 }

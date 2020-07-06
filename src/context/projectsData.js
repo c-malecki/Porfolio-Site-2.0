@@ -29,7 +29,7 @@ export const projects = [
     alt: "LFG social media app",
     title: "LFG - Looking for Group",
     description:
-      "Working prototype of a mock social media site for connecting gamers with play groups. API functionality currently implemented through the use of React context API.",
+      "Prototype of a mock social media site for connecting gamers with play groups. API functionality currently implemented through the use of React context API.",
     tech: "React, react-router-dom, SASS, context API, Formik, Yup",
     github: "https://github.com/c-malecki/lfg-app",
     demo: "https://lfg-demo.netlify.app/",

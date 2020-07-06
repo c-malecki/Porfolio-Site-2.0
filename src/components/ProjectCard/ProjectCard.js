@@ -1,35 +1,27 @@
 import React from "react";
 
 export const ProjectCard = (props) => {
-  const {
-    title,
-    description,
-    github,
-    demo,
-    pic,
-    alt,
-    titleId,
-    descriptionId,
-  } = props;
+  const { title, description, github, demo, pic, alt, tech, addClass } = props;
   return (
     <div className="project-card-container">
-      <span className="mobile-title">{title}</span>
-      <div className="card-image">
-        <img src={pic} alt={alt} />
-      </div>
-      <div className="card-title" id={`title-id-${titleId}`}>
-        <div className="title-background">{title}</div>
-      </div>
-      <div className="card-description" id={`description-id-${descriptionId}`}>
-        <div className="description-background">{description}</div>
-      </div>
-      <div className="card-links">
-        <a href={github} target="_blank" rel="noopener noreferrer">
-          GitHub
-        </a>
-        <a href={demo} target="_blank" rel="noopener noreferrer">
-          Demo
-        </a>
+      <div className={`projectcard-content ${addClass}`}>
+        <div className="card-img">
+          <img src={pic} alt={alt} />
+        </div>
+        <div className={`projectcard-info ${addClass}`}>
+          <h3>{title}</h3>
+          <p>{description}</p>
+          <span className="card-tech">Tech:</span>
+          <span>{tech}</span>
+          <span className="card-links">
+            <a href={github} target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+            <a href={demo} target="_blank" rel="noopener noreferrer">
+              Demo
+            </a>
+          </span>
+        </div>
       </div>
     </div>
   );

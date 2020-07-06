@@ -13,12 +13,12 @@ export const Projects = () => {
               pic={project.pic}
               alt={project.alt}
               title={project.title}
-              titleId={project.titleId}
               description={project.description}
-              descriptionId={project.descriptionId}
+              tech={project.tech}
               github={project.github}
               demo={project.demo}
               key={project.title}
+              addClass="fun-bg"
             />
           ))}
         </div>

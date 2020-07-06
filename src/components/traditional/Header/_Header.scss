@@ -5,6 +5,7 @@
 
 .header-z {
   background-color: $traditional-black;
+  z-index: 1;
   .hash-links-container-mobile {
     display: none;
   }
