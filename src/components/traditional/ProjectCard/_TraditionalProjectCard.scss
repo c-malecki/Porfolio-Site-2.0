@@ -1,133 +1,73 @@
 .t-project-card-container {
-  display: flex;
-  flex-direction: column;
-  height: 247px;
-  width: 247px;
+  height: 20rem;
+  width: 20rem;
   border: 3px solid rgb(212, 212, 212);
   border-radius: 20px;
   margin: 5px;
   overflow: hidden;
 
-  .t-mobile-title {
-    display: none;
-  }
-
-  .t-card-image {
-    height: 247px;
+  .t-projectcard-content {
+    position: relative;
+    height: 100%;
     width: 100%;
-    transition: 0.7;
 
-    img {
+    .t-card-img {
+      position: absolute;
       height: 100%;
       width: 100%;
-      transition: 0.7;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .t-projectcard-info {
+      display: none;
     }
   }
-
-  .t-card-title {
-    position: relative;
-    bottom: 230px;
-    color: black;
-    width: 100%;
-    height: 0%;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    transition: 0.7s;
-    opacity: 0;
-  }
-
-  .t-card-description {
-    position: relative;
-    font-weight: 500;
-    font-size: 14px;
-    bottom: 100px;
-    text-align: center;
-    color: black;
-    height: 0%;
-    opacity: 0;
-    transition: 0.7s;
-  }
-
-  .t-card-links {
-    position: relative;
-    bottom: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 0%;
-    transition: 0.7s;
-    opacity: 0;
-
-    a {
-      display: inline-block;
-      padding: 6px 10px;
-      background-color: black;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      font-family: "Pxlvetica";
-      color: white;
-      cursor: pointer;
-      transition: 0.7s;
-      opacity: 0;
-    }
-  }
-}
-
-#title-id-1 {
-  font-family: "Diablo_Heavy";
-  line-height: 20px;
-}
-
-#description-id-1 {
-  font-family: "formal_436_bt";
 }
 
 @media (hover: hover) {
   .t-project-card-container:hover {
-    .t-card-title {
-      position: relative;
-      color: black;
-      width: 100%;
-      height: 0%;
-      font-size: 20px;
-      font-weight: bold;
-      text-align: center;
-      opacity: 1;
-      transition: 0.7s;
-    }
+    .t-projectcard-content {
+      background-color: $bg-black-2;
+      .t-card-img {
+        display: none;
+      }
 
-    .t-card-image img {
-      opacity: 0.5;
-    }
+      .t-projectcard-info {
+        display: flex;
+        flex-direction: column;
+        padding: 0.3rem 0.5rem;
+        height: 100%;
 
-    .t-card-description {
-      position: relative;
-      font-weight: 500;
-      bottom: 180px;
-      text-align: center;
-      margin: auto;
-      color: black;
-      opacity: 1;
-      transition: 0.7s;
-    }
+        h3 {
+          text-align: center;
+          margin-block-end: 0;
+        }
 
-    .t-card-links {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-evenly;
-      transform: translateY(-20px);
-      width: 100%;
-      opacity: 1;
-      transition: 0.7s;
+        .t-card-tech {
+          font-weight: bold;
+          font-size: 0.9rem;
+        }
 
-      a {
-        opacity: 1;
-        transition: 0.7s;
+        .t-card-links {
+          margin: auto auto 1.5rem auto;
+
+          a {
+            margin: auto 1rem;
+            text-decoration: none;
+            color: black;
+            background: $traditional-blue;
+            border: 2px solid $traditional-black;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 4px 8px;
+            cursor: pointer;
+          }
+        }
       }
     }
   }
@@ -136,28 +76,55 @@
 @media only screen and (min-width: 0px) and (max-width: 992px),
   only screen and (min-device-width: 0px) and (max-width: 992px) {
   .t-project-card-container {
-    .t-mobile-title {
-      display: block;
-      text-align: center;
-      font-weight: bold;
-      color: $traditional-black;
-    }
+    max-width: 18rem;
+    max-height: 18rem;
+  }
+  .t-project-card-container:hover,
+  .t-project-card-container:focus {
+    .t-projectcard-content {
+      background-color: $bg-black-2;
+      .t-card-img {
+        display: none;
+      }
 
-    .t-title-background {
-      display: none;
-    }
+      .t-projectcard-info {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0.5rem;
+        height: 100%;
 
-    .t-description-background {
-      display: none;
-    }
+        h3 {
+          text-align: center;
+          margin-block-end: 0;
+          margin-block-start: 0.5rem;
+        }
 
-    .t-card-links {
-      opacity: 1;
-      bottom: 50px;
+        .t-card-tech {
+          font-weight: bold;
+          font-size: 0.9rem;
+        }
 
-      a {
-        opacity: 1;
-        z-index: 1;
+        p {
+          margin-block-end: 0.5rem;
+          margin-block-start: 0.5rem;
+        }
+
+        .t-card-links {
+          margin: auto auto 1rem auto;
+
+          a {
+            margin: auto 1rem;
+            text-decoration: none;
+            color: black;
+            background: $traditional-blue;
+            border: 2px solid $traditional-black;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 2px 4px;
+            font-size: 0.9rem;
+          }
+        }
       }
     }
   }

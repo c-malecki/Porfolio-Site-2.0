@@ -7,10 +7,9 @@ export const projects = [
     pic: Flo,
     alt: "Flo's Whistle Pandemic",
     title: "Flo's Whistle: Pandemic",
-    titleId: 2,
     description:
-      "Anonymous reporting platform for medical professionals amidst COVID-19 pandemic with visual data dashboard.",
-    descriptionId: 2,
+      "Worked in a small team as frontend developer to build an anonymous reporting platform for medical professionals amidst COVID-19 pandemic with visual data dashboard.",
+    tech: "React, react-router-dom, SCSS, Formik, Yup, react-svgmt, d3.",
     github: "https://github.com/codefordayton/floswhistle-pandemic-v2",
     demo: "https://beta.floswhistle.org",
   },
@@ -18,10 +17,10 @@ export const projects = [
     pic: Lod,
     alt: "Diablo 2 character calculator",
     title: "Diablo II cc",
-    titleId: 1,
     description:
-      "Complex calculator built with MERN stack that recreates Diablo II's game logic and UI.",
-    descriptionId: 1,
+      "Complex calculator for Diablo II designed for theory crafting and character build sharing with a companion public resource REST API.",
+    tech:
+      "React, react-router-dom, Bootstrap, SCSS, Redux, Reselect, Axios, Formik, Yup, Node/Express, Mongoose, MongoDB",
     github: "https://github.com/c-malecki/pod-character-calculator",
     demo: "https://diabloii-cc.netlify.app/",
   },
@@ -29,22 +28,10 @@ export const projects = [
     pic: LFG,
     alt: "LFG social media app",
     title: "LFG - Looking for Group",
-    titleId: 2,
-    description: "Social media site for connecting gamers with play groups.",
-    descriptionId: 2,
+    description:
+      "Working prototype of a mock social media site for connecting gamers with play groups. API functionality currently implemented through the use of React context API.",
+    tech: "React, react-router-dom, SASS, context API, Formik, Yup",
     github: "https://github.com/c-malecki/lfg-app",
     demo: "https://lfg-demo.netlify.app/",
   },
 ];
-
-// {
-//   pic: FTA,
-//   alt: "Financial Tracker Application",
-//   title: "Financial Tracker App",
-//   titleId: 2,
-//   description:
-//     "Personal finance tracker similar to banking app. Uses React, React-Router, Redux, Formik, Yup, Bootstrap.",
-//   descriptionId: 2,
-//   github: "https://github.com/c-malecki/FinancialTrackerApp",
-//   demo: "https://codesandbox.io/s/github/c-malecki/FinancialTrackerApp",
-// },

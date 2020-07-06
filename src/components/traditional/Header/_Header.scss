@@ -4,6 +4,7 @@
 }
 
 .header-z {
+  background-color: $traditional-black;
   .hash-links-container-mobile {
     display: none;
   }
@@ -14,6 +15,9 @@
     height: 5rem;
     background-color: $traditional-black;
     z-index: 10;
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
 
     .traditional-mobile-menu-container {
       display: none;
@@ -45,7 +49,6 @@
 
     .hash-links-container {
       margin-left: auto;
-      margin-right: 4rem;
 
       a {
         text-decoration: none;

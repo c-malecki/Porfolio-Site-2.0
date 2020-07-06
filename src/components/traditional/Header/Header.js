@@ -9,15 +9,17 @@ export const Header = () => {
 
   const { changePage, changeToFixed, toFixed, elRef } = useContext(AppContext);
   useEffect(() => {
-    const handleYScroll = () => {
-      const targetPos = elRef.offsetTop;
-      const curPosition = window.pageYOffset;
-      changeToFixed(curPosition > targetPos);
-    };
-    window.addEventListener("scroll", handleYScroll);
-    return () => {
-      window.removeEventListener("scroll", handleYScroll);
-    };
+    if (elRef) {
+      const handleYScroll = () => {
+        const targetPos = elRef.offsetTop;
+        const curPosition = window.pageYOffset;
+        changeToFixed(curPosition > targetPos);
+      };
+      window.addEventListener("scroll", handleYScroll);
+      return () => {
+        window.removeEventListener("scroll", handleYScroll);
+      };
+    }
   }, [elRef, changeToFixed]);
 
   const toggleMenu = () => {
