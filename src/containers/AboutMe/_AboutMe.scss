@@ -77,6 +77,10 @@
         margin-bottom: 50px;
         height: auto;
         overflow-y: auto;
+
+        .blurb {
+          height: 100%;
+        }
       }
     }
   }
@@ -107,8 +111,8 @@
 
       .about-row {
         margin-top: 0px;
-        margin-bottom: 100px;
-        height: 100%;
+        margin-bottom: 50px;
+        height: auto;
         width: 100%;
       }
     }
