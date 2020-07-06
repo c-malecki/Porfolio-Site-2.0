@@ -10,7 +10,8 @@
   letter-spacing: 2px;
   padding: 1rem 2rem;
   transition: 0.2s;
-  animation: light 2s ease 1s forwards, blink 5s linear 3s infinite;
+  animation: light 2s ease 1s forwards;
+  // , blink 5s linear 3s infinite;
   overflow: hidden;
   border-radius: 0.5rem;
   text-align: center;
