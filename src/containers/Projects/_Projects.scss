@@ -5,20 +5,13 @@
   animation-delay: 0s;
   animation-fill-mode: forwards;
 
-  .projects-content {
+  .projects-row {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-
-    .projects-row {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 10px;
-      margin-top: 50px;
-    }
+    margin: auto;
+    height: 100%;
   }
 }
 
@@ -31,32 +24,16 @@
   }
 }
 
-@media only screen and (min-width: 0px) and (max-width: 992px),
-  only screen and (min-device-width: 0px) and (max-width: 992px) {
+@media only screen and (min-width: 0px) and (max-width: 1024px),
+  only screen and (min-device-width: 0px) and (max-width: 1024px) {
   .projects-background {
-    .projects-content {
-      height: 100%;
-
-      .projects-row {
-        margin-top: 0;
-        margin-bottom: 50px;
-        height: auto;
-        width: 100%;
-        overflow-y: auto;
-      }
-    }
-  }
-}
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  .projects-background {
-    .projects-content {
-      .projects-row {
-        margin-top: 0;
-        margin-bottom: 50px;
-        height: auto;
-        width: 100%;
-      }
+    overflow-y: scroll;
+    .projects-row {
+      margin-top: 0;
+      margin-bottom: 56px;
+      height: auto;
+      width: 100%;
+      overflow-y: auto;
     }
   }
 }

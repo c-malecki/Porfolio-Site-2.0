@@ -2,8 +2,8 @@
   display: none;
 }
 
-@media only screen and (min-width: 0px) and (max-width: 992px),
-  only screen and (min-device-width: 0px) and (max-width: 992px) {
+@media only screen and (min-width: 0px) and (max-width: 1024px),
+  only screen and (min-device-width: 0px) and (max-width: 1024px) {
   .mobile-navigation-z {
     display: block;
     position: absolute;
@@ -27,24 +27,19 @@
         border-radius: 6px;
         background-color: rgb(70, 70, 70);
         color: white;
+        padding: 0;
       }
 
       #left {
         margin-top: 0.5rem;
         margin-right: auto;
         margin-left: 0.5rem;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-          "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-          "Helvetica Neue", sans-serif;
       }
 
       #right {
         margin-top: 0.5rem;
         margin-right: 0.5rem;
         margin-left: auto;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-          "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-          "Helvetica Neue", sans-serif;
       }
 
       #menu {

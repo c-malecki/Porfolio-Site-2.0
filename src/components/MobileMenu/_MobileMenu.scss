@@ -1,9 +1,9 @@
-@media only screen and (min-width: 0px) and (max-width: 992px),
-  only screen and (min-device-width: 0px) and (max-width: 992px) {
+@media only screen and (min-width: 0px) and (max-width: 1024px),
+  only screen and (min-device-width: 0px) and (max-width: 1024px) {
   .mobile-menu-container {
     position: absolute;
     width: 100%;
-    transform: translateY(-167px);
+    transform: translateY(-267px);
     transition: 0.7s;
     background-color: $traditional-black;
     z-index: -3;

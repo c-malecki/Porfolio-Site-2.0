@@ -14,42 +14,36 @@
     }
   }
 
-  .contact-content {
+  .contact-column {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: auto;
+    width: 80%;
+    max-width: 1200px;
     height: 100%;
 
-    .contact-column {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 80%;
-      height: 80%;
+    .contact-heading {
+      text-align: center;
+      color: white;
+      font-family: "PressStart2P";
+      line-height: 1.4;
     }
-  }
-}
 
-.contact-heading {
-  text-align: center;
-  color: white;
-  font-family: "PressStart2P";
-  line-height: 1.4;
-}
+    .contact-social {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      color: black;
 
-.contact-social {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  color: black;
-
-  i {
-    color: white;
-    font-size: 5em;
-    padding: 8px;
-    cursor: pointer;
+      i {
+        color: white;
+        font-size: 5rem;
+        padding: 8px;
+        cursor: pointer;
+      }
+    }
   }
 }
 
@@ -73,28 +67,30 @@
   }
 }
 
-@media only screen and (min-width: 0px) and (max-width: 992px),
-  only screen and (min-device-width: 0px) and (max-width: 992px) {
+@media only screen and (min-width: 0px) and (max-width: 1024px),
+  only screen and (min-device-width: 0px) and (max-width: 1024px) {
   .contact-background {
-    background-color: transparent;
-  }
+    overflow-y: scroll;
 
-  .contact-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-  }
+    .contact-column {
+      width: 100%;
+      margin-bottom: 56px;
+      padding: 1rem 0;
 
-  .contact-heading h2 {
-    font-size: 1rem;
-  }
+      .contact-heading {
+        font-size: 1rem;
+        margin: 0.5rem;
+      }
 
-  .contact-social i {
-    color: white;
-    font-size: 4em;
-    padding: 8px;
-    cursor: pointer;
+      .contact-social {
+        margin-top: 1rem;
+        i {
+          color: white;
+          font-size: 4rem;
+          padding: 8px;
+          cursor: pointer;
+        }
+      }
+    }
   }
 }
