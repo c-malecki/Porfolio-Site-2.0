@@ -1,25 +1,53 @@
 @import "./Circle/Circle";
 @import "./Sky/Sky";
 @import "./Grass/Grass";
-@import "./temp/temp";
 
 .tradition-banner {
-  height: 70vh;
+  height: 80vh;
   background-color: $traditional-blue;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 2px solid $border-gray;
+  border-top: 2px solid $border-gray;
 
   .banner-inner-container {
     position: relative;
-    height: 70vh;
+    height: 80vh;
     width: 100%;
-    max-width: 1500px;
-    background-color: black;
+    // max-width: 1500px;
+    // background-image: url("../../../assets/images/tbanner.png");
+    // background-position: center;
+    background: center / cover no-repeat
+      url("../../../assets/images/tbanner.png");
     overflow: hidden;
   }
+
+  // .banner-inner-container {
+  //   position: relative;
+  //   height: 70vh;
+  //   width: 100%;
+  //   max-width: 1500px;
+  //   background-color: black;
+  //   overflow: hidden;
+  // }
 }
 
 .adjustToHeader {
   margin-top: 80px;
+}
+@media only screen and (min-width: 0px) and (max-width: 992px),
+  only screen and (min-device-width: 0px) and (max-width: 992px) {
+  .tradition-banner {
+    height: 60vh;
+
+    .banner-inner-container {
+      position: relative;
+      height: 60vh;
+      width: 100%;
+      background: center / cover no-repeat
+        url("../../../assets/images/tbanner.png");
+      overflow: hidden;
+    }
+  }
 }
