@@ -14,8 +14,8 @@ export const About = () => {
               />
             </div>
             <p>
-              I am a musician, lover of games, and I enjoy pushing the
-              boundaries of creativity and logic.
+              My name is Chris. I am a musician, lover of games, and I enjoy
+              pushing the boundaries of creativity and logic.
             </p>
           </div>
         </div>

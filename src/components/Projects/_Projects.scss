@@ -1,20 +1,36 @@
-.projects-container {
-  @extend %section;
-  padding: 2rem 0;
+@import "./ProjectCard/ProjectCard";
+@import "./ProjectInfo/ProjectInfo";
 
-  .projects-row {
+.Projects-container {
+  @extend %section;
+  color: $off-white;
+  padding: 1rem 0;
+
+  .Projects-row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    margin: auto;
-    height: 100%;
+    padding: 1rem 0;
+
+    .Projects-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+    }
   }
 }
 
 @media only screen and (min-width: 0px) and (max-width: 1024px),
   only screen and (min-device-width: 0px) and (max-width: 1024px) {
-  .projects-container {
+  .Projects-container {
     width: 90%;
+
+    .Projects-row {
+      .Projects-col {
+        width: 90vw;
+      }
+    }
   }
 }

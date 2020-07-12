@@ -1,0 +1,53 @@
+.ProjectInfo-contaner {
+  display: flex;
+  flex-direction: column;
+
+  p {
+    color: $off-white;
+    font-size: 1.2rem;
+    font-family: "Roboto-R";
+    padding-right: 20%;
+  }
+
+  .ProjectInfo-links {
+    margin-top: 1rem;
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      margin-right: 2rem;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      font-family: "Raleway";
+      border: 1px solid $border-gray;
+      padding: 0.5rem;
+      z-index: 1;
+    }
+
+    @media (hover: hover) {
+      a:hover {
+        background-color: $hover-gray;
+        color: $l-purp;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 1024px),
+  only screen and (min-device-width: 0px) and (max-width: 1024px) {
+  .ProjectInfo-contaner {
+    h3 {
+      text-align: center;
+    }
+    p {
+      padding-right: 0;
+    }
+
+    .ProjectInfo-links {
+      margin: 1rem auto;
+      a {
+        margin: auto 1.5rem;
+      }
+    }
+  }
+}

@@ -1,25 +1,28 @@
 import React, { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
-import { ProjectCard } from "../index";
+import { ProjectCard } from "./ProjectCard/ProjectCard";
+import { ProjectInfo } from "./ProjectInfo/ProjectInfo";
 
 export const Projects = () => {
   const { projects } = useContext(AppContext);
   return (
-    <div className="projects-container">
-      <div className="projects-row">
-        {projects.map((project) => (
-          <ProjectCard
-            pic={project.pic}
-            alt={project.alt}
-            title={project.title}
-            description={project.description}
-            tech={project.tech}
-            github={project.github}
-            demo={project.demo}
-            key={project.title}
-          />
-        ))}
-      </div>
+    <div className="Projects-container">
+      {projects.map((project) => (
+        <div className="Projects-row" key={project.title}>
+          <div className="Projects-col">
+            <ProjectCard pic={project.pic} alt={project.alt} />
+          </div>
+          <div className="Projects-col">
+            <ProjectInfo
+              title={project.title}
+              description={project.description}
+              tech={project.tech}
+              github={project.github}
+              demo={project.demo}
+            />
+          </div>
+        </div>
+      ))}
     </div>
   );
 };
