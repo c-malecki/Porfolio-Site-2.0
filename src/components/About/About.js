@@ -13,7 +13,7 @@ export const About = () => {
                 alt="Chris Malecki"
               />
             </div>
-            <p>
+            <p className="text-center">
               My name is Chris. I am a musician, lover of games, and I enjoy
               pushing the boundaries of creativity and logic.
             </p>

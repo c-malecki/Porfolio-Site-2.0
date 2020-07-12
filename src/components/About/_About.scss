@@ -38,7 +38,6 @@
 
       p {
         color: $off-white;
-        text-align: center;
         font-size: 1.2rem;
         font-family: "Roboto-R";
         margin: 1rem auto;
@@ -50,6 +49,27 @@
 
 @media only screen and (min-width: 0px) and (max-width: 1024px),
   only screen and (min-device-width: 0px) and (max-width: 1024px) {
+  .about-container {
+    width: 90%;
+    .about-row {
+      .about-col {
+        width: 90vw;
+
+        .about-text-wrapper {
+          border: none;
+        }
+
+        .about-img {
+          height: 16rem;
+          width: 16rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 768px),
+  only screen and (min-device-width: 0px) and (max-width: 768px) {
   .about-container {
     width: 90%;
     .about-row {

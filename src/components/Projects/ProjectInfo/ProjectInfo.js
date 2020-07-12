@@ -6,7 +6,7 @@ export const ProjectInfo = (props) => {
     <div className="ProjectInfo-contaner">
       <h3 className="sub-heading">{title}</h3>
       <p>{description}</p>
-      <p>{tech}</p>
+      <p className="tech-p">{tech}</p>
       <div className="ProjectInfo-links">
         <a href={github} target="_blank" rel="noopener noreferrer">
           github
