@@ -3,7 +3,7 @@ import { EmailForm } from "../index";
 
 export const Contact = () => {
   return (
-    <div className="contact-container" id="contact">
+    <div className="contact-container">
       <div className="contact-row">
         <p>
           Do you like what you see? Shoot me a message with any questions or

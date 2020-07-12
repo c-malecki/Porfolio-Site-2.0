@@ -1,14 +1,8 @@
-import React, { useContext, useRef, useEffect } from "react";
-import { AppContext } from "../../context/AppContext";
+import React from "react";
 
 export const About = () => {
-  const { getRef } = useContext(AppContext);
-  const about = useRef();
-  useEffect(() => {
-    getRef(about.current);
-  }, [getRef]);
   return (
-    <div className="about-container" id="about" ref={about}>
+    <div className="about-container">
       <div className="about-row">
         <div className="about-col">
           <div className="about-text-wrapper">

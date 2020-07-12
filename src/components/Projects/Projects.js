@@ -5,7 +5,7 @@ import { ProjectCard } from "../index";
 export const Projects = () => {
   const { projects } = useContext(AppContext);
   return (
-    <div className="projects-container" id="projects">
+    <div className="projects-container">
       <div className="projects-row">
         {projects.map((project) => (
           <ProjectCard

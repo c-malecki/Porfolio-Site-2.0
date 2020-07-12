@@ -1,11 +1,11 @@
 import React, { useState, useContext, useEffect } from "react";
-import { MobileMenuButton } from "../index";
-import { HashLink } from "react-router-hash-link";
 import { AppContext } from "../../context/AppContext";
+import { MobileMenuButton } from "./MobileMenuButton/MobileMenuButton";
+import { HashLinksNav } from "./HashLinksNav/HashLinksNav";
+import { MobileNav } from "./MobileNav/MobileNav";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const { changeToFixed, toFixed, elRef } = useContext(AppContext);
   useEffect(() => {
     if (elRef) {
@@ -20,53 +20,16 @@ export const Header = () => {
       };
     }
   }, [elRef, changeToFixed]);
-
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className={`header-z ${toFixed ? "fixed" : ""}`}>
-      <div className="header-container">
-        <div className="hash-links-container">
-          <div className="hash-links-menu">
-            <HashLink smooth to="/#home">
-              Home
-            </HashLink>
-            <HashLink smooth to="/#about">
-              About
-            </HashLink>
-            <HashLink smooth to="/#projects">
-              Projects
-            </HashLink>
-            <HashLink smooth to="/#contact">
-              Contact
-            </HashLink>
-          </div>
-        </div>
-        <div className="traditional-mobile-menu-container">
-          <MobileMenuButton toggle={toggleMenu} isOpen={isOpen} />
-        </div>
+    <div className={`Header-container ${toFixed ? "fixed" : ""}`}>
+      <div className="Header-content">
+        <HashLinksNav />
+        <MobileMenuButton toggle={toggleMenu} isOpen={isOpen} />
       </div>
-      <div
-        className={`hash-links-container-mobile ${
-          isOpen ? "open-container" : ""
-        }`}
-      >
-        <div className={`hash-links-menu-mobile ${isOpen ? "open-menu" : ""}`}>
-          <HashLink smooth to="/#home">
-            Home
-          </HashLink>
-          <HashLink smooth to="/#about">
-            About
-          </HashLink>
-          <HashLink smooth to="/#projects">
-            Projects
-          </HashLink>
-          <HashLink smooth to="/#contact">
-            Contact
-          </HashLink>
-        </div>
-      </div>
+      <MobileNav isOpen={isOpen} />
     </div>
   );
 };
