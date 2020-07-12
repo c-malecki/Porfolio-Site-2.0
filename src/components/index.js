@@ -1,8 +1,10 @@
 export * from "./ProjectCard/ProjectCard";
+export * from "./ProjectCarousel/ProjectCarousel";
 export * from "./MainNavigation/MainNavigation";
 export * from "./MobileNavigation/MobileNavigation";
 export * from "./MobileMenu/MobileMenu";
 export * from "./EmailForm/EmailForm";
+export * from "./ProjectCarousel/ProjectCarousel";
 // traditional
 export * from "./traditional/Header/Header";
 export * from "./traditional/MobileMenu/TraditonalMobileMenu";

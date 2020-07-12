@@ -1,10 +1,17 @@
 .fixed {
   position: fixed;
   width: 100%;
+  background-color: transparent !important;
+
+  .header-container {
+    a {
+      background-color: $bg-black;
+    }
+  }
 }
 
 .header-z {
-  background-color: $traditional-black;
+  background-color: $bg-black;
   z-index: 1;
   .hash-links-container-mobile {
     display: none;
@@ -13,8 +20,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    height: 5rem;
-    background-color: $traditional-black;
+    height: 3.5rem;
     z-index: 10;
     width: 100%;
     max-width: 1500px;
@@ -30,20 +36,18 @@
       margin-left: 1rem;
       z-index: 5;
 
-      span {
-        color: white;
-        z-index: 4;
-      }
-
       a {
         text-decoration: none;
         font-weight: bold;
+        font-family: "Roboto-R";
         color: $traditional-blue;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 0.5rem;
       }
 
       @media (hover: hover) {
         a:hover {
-          color: $traditional-d-blue;
+          background-color: rgba(255, 255, 255, 0.2);
         }
       }
     }
@@ -54,14 +58,18 @@
       a {
         text-decoration: none;
         text-transform: uppercase;
-        margin: 0 1rem;
+        margin: 0 0.5rem;
         color: white;
         font-size: 1.2rem;
         font-weight: bold;
+        font-family: "Raleway";
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 0.5rem;
       }
 
       @media (hover: hover) {
         a:hover {
+          background-color: rgba(255, 255, 255, 0.2);
           color: $traditional-blue;
         }
       }
@@ -69,16 +77,17 @@
   }
 }
 
-@media only screen and (min-width: 0px) and (max-width: 992px),
-  only screen and (min-device-width: 0px) and (max-width: 992px) {
+@media only screen and (min-width: 0px) and (max-width: 1024px),
+  only screen and (min-device-width: 0px) and (max-width: 1024px) {
   .header-z {
     z-index: 2;
-    .toggle-container {
-      display: none;
-    }
+    background-color: $traditional-black;
+    .header-container {
+      background-color: $traditional-black;
 
-    .hash-links-container {
-      display: none;
+      .hash-links-container {
+        display: none;
+      }
     }
 
     .hash-links-container-mobile {
@@ -98,6 +107,8 @@
         align-items: center;
         height: 14rem;
         z-index: -1;
+        border-top: 1px solid rgba(255, 255, 255, 0.6);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.6);
 
         a {
           position: relative;
@@ -108,6 +119,7 @@
           font-size: 1.2rem;
           font-weight: bold;
           z-index: -1;
+          font-family: "Raleway";
         }
       }
     }

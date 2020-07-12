@@ -6,8 +6,7 @@ export const Projects = () => {
   const { projects } = useContext(AppContext);
   return (
     <div className="traditional-projects" id="projects">
-      <h2 className="section-heading">{`< Projects />`}</h2>
-      <div className="traditional-projectcard-container">
+      <div className="projects-row">
         {projects.map((project) => (
           <ProjectCard
             pic={project.pic}
@@ -18,6 +17,7 @@ export const Projects = () => {
             github={project.github}
             demo={project.demo}
             key={project.title}
+            addClass="fun-bg"
           />
         ))}
       </div>

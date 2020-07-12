@@ -1,36 +1,66 @@
 .traditional-layout {
   display: flex;
   flex-direction: column;
+  background: center / cover no-repeat url("../../assets/images/tbanner.png");
+  background-attachment: fixed;
 
   .traditional-content {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 1500px;
     margin: auto;
-    padding-bottom: 2rem;
+
+    .traditional-about-section {
+      width: 100%;
+      background-color: $traditional-black;
+    }
+
+    .traditional-projects-section {
+      width: 100%;
+      background-color: $traditional-black;
+    }
+
+    .buffer {
+      width: 100%;
+      height: 20rem;
+      background-color: $traditional-bg-black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .traditional-contact-section {
+      width: 100%;
+      background-color: $traditional-black;
+    }
 
     .section-heading {
       text-align: center;
       text-transform: uppercase;
       font-size: 2rem;
-      color: $traditional-d-blue;
+      color: $traditional-off-white;
+      font-family: "Raleway";
     }
 
     .sub-heading {
       font-size: 1.5rem;
-      color: $traditional-black;
+      color: $traditional-blue;
+      font-family: "Roboto-M";
     }
   }
 }
 
-@media only screen and (min-width: 0px) and (max-width: 992px),
-  only screen and (min-device-width: 0px) and (max-width: 992px) {
+@media only screen and (min-width: 0px) and (max-width: 1024px),
+  only screen and (min-device-width: 0px) and (max-width: 1024px) {
   .traditional-layout {
+    background-image: none;
     .traditional-content {
-      width: 90%;
       min-width: 0;
+      .buffer {
+        height: 10rem;
+        background-color: $traditional-d-blue;
+      }
     }
   }
 }

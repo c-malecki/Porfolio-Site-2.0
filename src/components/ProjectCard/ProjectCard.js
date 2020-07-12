@@ -11,8 +11,8 @@ export const ProjectCard = (props) => {
         <div className={`projectcard-info ${addClass}`}>
           <h3>{title}</h3>
           <p>{description}</p>
-          <span className="card-tech">Tech:</span>
-          <span>{tech}</span>
+          <h5 className="card-tech">Tech:</h5>
+          <p>{tech}</p>
           <span className="card-links">
             <a href={github} target="_blank" rel="noopener noreferrer">
               GitHub

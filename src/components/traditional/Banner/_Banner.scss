@@ -1,53 +1,62 @@
-@import "./Circle/Circle";
-@import "./Sky/Sky";
-@import "./Grass/Grass";
-
 .tradition-banner {
-  height: 80vh;
-  background-color: $traditional-blue;
+  height: 100vh;
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 2px solid $border-gray;
-  border-top: 2px solid $border-gray;
 
   .banner-inner-container {
     position: relative;
-    height: 80vh;
+    height: 100vh;
     width: 100%;
-    // max-width: 1500px;
-    // background-image: url("../../../assets/images/tbanner.png");
-    // background-position: center;
-    background: center / cover no-repeat
-      url("../../../assets/images/tbanner.png");
-    overflow: hidden;
-  }
+    background-color: $bg-black;
 
-  // .banner-inner-container {
-  //   position: relative;
-  //   height: 70vh;
-  //   width: 100%;
-  //   max-width: 1500px;
-  //   background-color: black;
-  //   overflow: hidden;
-  // }
+    .diamond {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      -webkit-transform: translate(-50%, -50%) rotate(45deg);
+      border: 1px solid $traditional-off-white;
+
+      width: 16em;
+      height: 16em;
+
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+        color: $traditional-off-white;
+        font-family: "Raleway";
+        text-transform: uppercase;
+        font-size: 2rem;
+      }
+    }
+  }
 }
 
 .adjustToHeader {
-  margin-top: 80px;
+  margin-top: 56px;
 }
-@media only screen and (min-width: 0px) and (max-width: 992px),
-  only screen and (min-device-width: 0px) and (max-width: 992px) {
+
+@media only screen and (min-width: 0px) and (max-width: 1024px),
+  only screen and (min-device-width: 0px) and (max-width: 1024px) {
   .tradition-banner {
     height: 60vh;
+    background: center / cover no-repeat
+      url("../../../assets/images/tbanner.png");
 
     .banner-inner-container {
       position: relative;
       height: 60vh;
       width: 100%;
-      background: center / cover no-repeat
-        url("../../../assets/images/tbanner.png");
-      overflow: hidden;
+
+      .diamond {
+        width: 12em;
+        height: 12em;
+      }
     }
   }
 }

@@ -2,8 +2,8 @@
   display: none;
 }
 
-@media only screen and (min-width: 0px) and (max-width: 992px),
-  only screen and (min-device-width: 0px) and (max-width: 992px) {
+@media only screen and (min-width: 0px) and (max-width: 1024px),
+  only screen and (min-device-width: 0px) and (max-width: 1024px) {
   .traditional-mobile-menu {
     display: block;
     border: 2px solid rgba(255, 255, 255, 0.6);
@@ -14,7 +14,7 @@
     z-index: 5;
 
     i {
-      color: white;
+      color: rgba(255, 255, 255, 0.6);
       font-size: 1.6rem;
       padding: 0.5rem;
     }

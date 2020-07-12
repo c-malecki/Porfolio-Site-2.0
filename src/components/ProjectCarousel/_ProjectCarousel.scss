@@ -1,0 +1,119 @@
+.ProjectCarousel-container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  border: 1px solid black;
+  margin: auto;
+
+  .ProjectCarousel-row {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    justify-content: center;
+    background-color: $traditional-black;
+    height: 18.375rem;
+    padding: 1rem 0;
+
+    .ProjectCarousel-project-left {
+      position: relative;
+      transform: (translateX(-345px));
+    }
+
+    .ProjectCarousel-project-middle {
+      position: relative;
+    }
+
+    .ProjectCarousel-project-right {
+      position: relative;
+      transform: (translateX(345px));
+    }
+
+    .slide-right-anim {
+      animation: slideright 1s forwards;
+    }
+
+    .slide-left-anim {
+      animation: slideleft 1s forwards;
+    }
+
+    .slide-right-middle {
+      animation: sliderightmiddle 0.8s forwards;
+      animation-delay: 0.1s;
+    }
+
+    .slide-left-middle {
+      animation: slideleftmiddle 0.8s forwards;
+      animation-delay: 0.1s;
+    }
+
+    @keyframes slideright {
+      50% {
+        transform: translateX(325px);
+      }
+      51% {
+        transform: translateX(340px) rotate(6deg);
+      }
+      65% {
+        transform: translateX(305px) rotate(-6deg);
+      }
+      90% {
+        transform: translateX(335px) rotate(3deg);
+      }
+      100% {
+        transform: translateX(325px);
+      }
+    }
+    @keyframes slideleft {
+      50% {
+        transform: translateX(-325px);
+      }
+      51% {
+        transform: translateX(-340px) rotate(-6deg);
+      }
+      65% {
+        transform: translateX(-305px) rotate(6deg);
+      }
+      90% {
+        transform: translateX(-335px) rotate(-3deg);
+      }
+      100% {
+        transform: translateX(-325px);
+      }
+    }
+    @keyframes sliderightmiddle {
+      100% {
+        transform: translateX(800px);
+      }
+    }
+    @keyframes slideleftmiddle {
+      100% {
+        transform: translateX(-800px);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 1024px),
+  only screen and (min-device-width: 0px) and (max-width: 1024px) {
+  .ProjectCarousel-container {
+    width: 100%;
+    .ProjectCarousel-row {
+      height: 18.375rem;
+      padding: 1rem 0;
+      .ProjectCarousel-project-left {
+        position: absolute;
+        left: -300px;
+      }
+
+      .ProjectCarousel-project-middle {
+        position: absolute;
+      }
+
+      .ProjectCarousel-project-right {
+        position: absolute;
+        left: 325px;
+      }
+    }
+  }
+}

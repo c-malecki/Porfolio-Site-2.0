@@ -14,9 +14,21 @@ export const TraditionalPage = (props) => {
       <Header />
       <Banner />
       <div className="traditional-content">
-        <About />
-        <Projects />
-        <Contact />
+        <div className="traditional-about-section">
+          <About />
+        </div>
+        <div className="buffer">
+          <h2 className="section-heading">Projects</h2>
+        </div>
+        <div className="traditional-projects-section">
+          <Projects />
+        </div>
+        <div className="buffer">
+          <h2 className="section-heading">Contact</h2>
+        </div>
+        <div className="traditional-contact-section">
+          <Contact />
+        </div>
       </div>
       <Footer />
     </div>

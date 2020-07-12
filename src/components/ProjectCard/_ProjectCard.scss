@@ -15,6 +15,7 @@
       position: absolute;
       height: 100%;
       width: 100%;
+      background-color: $traditional-off-white;
 
       img {
         height: 100%;
@@ -43,20 +44,28 @@
         padding: 0 0.5rem;
         height: 100%;
 
-        h3 {
+        h3,
+        h5 {
           text-align: center;
           margin-block-end: 0;
           margin-block-start: 0.5rem;
+          font-family: "Raleway";
+        }
+
+        h5 {
+          text-align: left;
         }
 
         .card-tech {
           font-weight: bold;
           font-size: 0.9rem;
+          font-family: "Roboto-M";
         }
 
         p {
           margin-block-end: 0.5rem;
           margin-block-start: 0.5rem;
+          font-family: "Roboto-R";
         }
 
         .card-links {
@@ -73,6 +82,7 @@
             font-weight: bold;
             padding: 2px 4px;
             font-size: 0.9rem;
+            font-family: "Roboto-R";
           }
         }
       }
@@ -112,20 +122,28 @@
         padding: 0 0.5rem;
         height: 100%;
 
-        h3 {
+        h3,
+        h5 {
           text-align: center;
           margin-block-end: 0;
           margin-block-start: 0.5rem;
+          font-family: "Roboto-M";
+        }
+
+        h5 {
+          text-align: left;
         }
 
         .card-tech {
           font-weight: bold;
           font-size: 0.9rem;
+          font-family: "Roboto-M";
         }
 
         p {
           margin-block-end: 0.5rem;
           margin-block-start: 0.5rem;
+          font-family: "Roboto-R";
         }
 
         .card-links {

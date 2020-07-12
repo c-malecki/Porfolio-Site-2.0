@@ -29,12 +29,9 @@ export const Header = () => {
     <div className={`header-z ${toFixed ? "fixed" : ""}`}>
       <div className="header-container">
         <div className="toggle-container">
-          <span>
-            Make it{" "}
-            <Link to="/fun" onClick={() => changePage(0)}>
-              fun!
-            </Link>
-          </span>
+          <Link to="/fun" onClick={() => changePage(0)}>
+            Make it fun!
+          </Link>
         </div>
         <div className="hash-links-container">
           <div className="hash-links-menu">
