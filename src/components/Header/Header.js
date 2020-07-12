@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-import { TraditionalMobileMenu } from "../index";
+import { MobileMenuButton } from "../index";
 import { HashLink } from "react-router-hash-link";
 import { AppContext } from "../../context/AppContext";
 
@@ -44,7 +44,7 @@ export const Header = () => {
           </div>
         </div>
         <div className="traditional-mobile-menu-container">
-          <TraditionalMobileMenu toggle={toggleMenu} isOpen={isOpen} />
+          <MobileMenuButton toggle={toggleMenu} isOpen={isOpen} />
         </div>
       </div>
       <div

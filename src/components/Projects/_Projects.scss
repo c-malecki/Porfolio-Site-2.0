@@ -1,9 +1,5 @@
-.traditional-projects {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 1500px;
-  margin: auto;
+.projects-container {
+  @extend %section;
   padding: 2rem 0;
 
   .projects-row {
@@ -18,7 +14,7 @@
 
 @media only screen and (min-width: 0px) and (max-width: 1024px),
   only screen and (min-device-width: 0px) and (max-width: 1024px) {
-  .traditional-projects {
+  .projects-container {
     width: 90%;
   }
 }

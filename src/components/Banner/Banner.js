@@ -3,13 +3,12 @@ import { AppContext } from "../../context/AppContext";
 
 export const Banner = () => {
   const { toFixed } = useContext(AppContext);
-
   return (
     <div
-      className={`tradition-banner ${toFixed ? "adjustToHeader" : ""}`}
+      className={`banner-container ${toFixed ? "adjustToHeader" : ""}`}
       id="home"
     >
-      <div className="banner-inner-container">
+      <div className="banner-inner">
         <div className="diamond">
           <span>welcome</span>
         </div>

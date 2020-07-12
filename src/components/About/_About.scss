@@ -1,26 +1,22 @@
-.traditional-about {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 1500px;
-  margin: auto;
+.about-container {
+  @extend %section;
   padding: 2rem 0;
 
-  .traditional-about-row {
+  .about-row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 
-    .traditional-about-col {
+    .about-col {
       position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 50%;
 
-      .about-wrapper {
-        border: 1px solid rgba(255, 255, 255, 0.5);
+      .about-text-wrapper {
+        border: 1px solid $border-gray;
         height: 100%;
 
         .about-img {
@@ -42,24 +38,12 @@
       }
 
       p {
-        color: $traditional-off-white;
+        color: $off-white;
         text-align: center;
         font-size: 1.2rem;
         font-family: "Roboto-R";
         margin: 1rem auto;
         width: 80%;
-      }
-
-      a {
-        text-decoration: none;
-        color: $traditional-blue;
-        font-family: "Roboto-M";
-      }
-
-      @media (hover: hover) {
-        a:hover {
-          color: $traditional-d-blue;
-        }
       }
     }
   }
@@ -67,13 +51,13 @@
 
 @media only screen and (min-width: 0px) and (max-width: 1024px),
   only screen and (min-device-width: 0px) and (max-width: 1024px) {
-  .traditional-about {
+  .about-container {
     width: 90%;
-    .traditional-about-row {
-      .traditional-about-col {
+    .about-row {
+      .about-col {
         width: 90vw;
 
-        .about-wrapper {
+        .about-text-wrapper {
           border: none;
         }
 

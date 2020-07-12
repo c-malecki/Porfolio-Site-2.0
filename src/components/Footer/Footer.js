@@ -2,7 +2,7 @@ import React from "react";
 
 export const Footer = () => {
   return (
-    <div className="traditional-footer">
+    <div className="footer-container">
       <div className="footer-icons">
         <a
           href="https://www.linkedin.com/in/christopher-malecki/"

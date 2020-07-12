@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-export class TraditionalEmailForm extends Component {
+export class EmailForm extends Component {
   state = {
     name: "",
     message: "",
@@ -38,48 +38,42 @@ export class TraditionalEmailForm extends Component {
   };
   render() {
     return (
-      <form className="email-form-t" onSubmit={(e) => this.formSubmit(e)}>
-        <div className="name-input-container-t">
+      <div className="EmailForm-container">
+        <form onSubmit={(e) => this.formSubmit(e)}>
           <input
             onChange={(e) => this.setState({ name: e.target.value })}
             name="name"
-            className="name-input-t"
+            className="name-input"
             type="text"
             placeholder="Name"
             value={this.state.name}
           />
-        </div>
 
-        <div className="your-email-container-t">
           <input
             onChange={(e) => this.setState({ email: e.target.value })}
             name="email"
-            className="your-email-t"
+            className="your-email"
             type="email"
             placeholder="your@email.com"
             required
             value={this.state.email}
           />
-        </div>
 
-        <div className="message-input-container-t">
           <textarea
             onChange={(e) => this.setState({ message: e.target.value })}
             name="message"
-            className="message-input-t"
+            className="message-input"
             type="text"
             placeholder="Your message"
             value={this.state.message}
             required
           />
-        </div>
 
-        <div className="email-button-container-t">
-          <button type="submit" className="email-submit-button-t">
+          <button type="submit" className="email-submit-button">
             {this.state.buttonText}
           </button>
-        </div>
-      </form>
+        </form>
+      </div>
     );
   }
 }

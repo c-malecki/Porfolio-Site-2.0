@@ -8,25 +8,25 @@ import {
   Footer,
 } from "../../components/index";
 
-export const TraditionalPage = (props) => {
+export const PageLayout = (props) => {
   return (
-    <div className="traditional-layout">
+    <div className="page-layout">
       <Header />
       <Banner />
-      <div className="traditional-content">
-        <div className="traditional-about-section">
+      <div className="page-content">
+        <div className="page-about-section">
           <About />
         </div>
-        <div className="buffer">
+        <div className="section-buffer">
           <h2 className="section-heading">Projects</h2>
         </div>
-        <div className="traditional-projects-section">
+        <div className="page-projects-section">
           <Projects />
         </div>
-        <div className="buffer">
+        <div className="section-buffer">
           <h2 className="section-heading">Contact</h2>
         </div>
-        <div className="traditional-contact-section">
+        <div className="page-contact-section">
           <Contact />
         </div>
       </div>

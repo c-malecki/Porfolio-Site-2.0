@@ -1,10 +1,10 @@
-$ui-yellow: rgb(242, 255, 122);
-$bg-black: rgba(0, 0, 0, 0.5);
-$bg-black-2: rgba(0, 0, 0, 0.15);
-$border-gray: rgba(255, 255, 255, 0.7);
-
-$traditional-black: rgb(45, 45, 45);
-$traditional-bg-black: rgba(0, 0, 0, 0.6);
-$traditional-blue: rgb(162, 162, 238);
-$traditional-d-blue: rgb(97, 97, 170);
-$traditional-off-white: rgb(233, 233, 233);
+$bg-black: rgb(45, 45, 45);
+$bg-black-t: rgba(0, 0, 0, 0.5);
+$border-gray: rgba(255, 255, 255, 0.6);
+$hover-gray: rgba(255, 255, 255, 0.2);
+// text color
+$off-white: rgb(230, 230, 230);
+// link/button hover and sub-header color
+$l-purp: rgb(162, 162, 238);
+// buffer-section background on mobile
+$d-purp: rgb(80, 80, 140);

@@ -8,10 +8,10 @@ export const About = () => {
     getRef(about.current);
   }, [getRef]);
   return (
-    <div className="traditional-about" id="about" ref={about}>
-      <div className="traditional-about-row">
-        <div className="traditional-about-col">
-          <div className="about-wrapper">
+    <div className="about-container" id="about" ref={about}>
+      <div className="about-row">
+        <div className="about-col">
+          <div className="about-text-wrapper">
             <h3 className="sub-heading">Who am I?</h3>
             <div className="about-img">
               <img
@@ -25,8 +25,8 @@ export const About = () => {
             </p>
           </div>
         </div>
-        <div className="traditional-about-col">
-          <div className="about-wrapper">
+        <div className="about-col">
+          <div className="about-text-wrapper">
             <h3 className="sub-heading">What do I do?</h3>
             <p>
               I am a Fullstack Developer. The frontend is my origin where I
@@ -35,7 +35,7 @@ export const About = () => {
               databases, web servers, and APIs.
             </p>
           </div>
-          <div className="about-wrapper">
+          <div className="about-text-wrapper">
             <h3 className="sub-heading">What do I make?</h3>
             <p>
               All kinds of applications from civic tech or social media to

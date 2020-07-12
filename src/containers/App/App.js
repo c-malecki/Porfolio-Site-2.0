@@ -1,12 +1,12 @@
 import React from "react";
-import { TraditionalPage } from "../index";
+import { PageLayout } from "../index";
 import { Switch, Route } from "react-router-dom";
 
 export const App = () => {
   return (
     <div className="App">
       <Switch>
-        <Route exact path="/" component={TraditionalPage} />
+        <Route exact path="/" component={PageLayout} />
       </Switch>
     </div>
   );

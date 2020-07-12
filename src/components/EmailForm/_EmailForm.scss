@@ -1,0 +1,44 @@
+.EmailForm-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 18rem;
+
+  .name-input,
+  .your-email {
+    height: 1.4rem;
+    width: 18rem;
+    background: $off-white;
+    color: $bg-black;
+    margin: auto;
+    border: 2px solid $bg-black;
+  }
+  .message-input {
+    width: 18rem;
+    min-height: 6rem;
+    background: $off-white;
+    color: $bg-black;
+    margin: auto;
+    border: 2px solid $bg-black;
+  }
+
+  .email-submit-button {
+    display: block;
+    margin: auto;
+    background: $off-white;
+    border: 2px solid $bg-black;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-family: "Roboto-R";
+  }
+
+  @media (hover: hover) {
+    .email-submit-button:hover {
+      background: $l-purp;
+    }
+  }
+}

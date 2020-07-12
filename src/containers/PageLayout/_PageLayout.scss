@@ -1,52 +1,44 @@
-.traditional-layout {
+.page-layout {
   display: flex;
   flex-direction: column;
   background: center / cover no-repeat
     url("https://portfolio-site-imgs.s3.us-east-2.amazonaws.com/background.jpg");
   background-attachment: fixed;
 
-  .traditional-content {
+  .page-content {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
     margin: auto;
 
-    .traditional-about-section {
+    .page-about-section,
+    .page-projects-section,
+    .page-contact-section {
       width: 100%;
-      background-color: $traditional-black;
+      background-color: $bg-black;
     }
 
-    .traditional-projects-section {
-      width: 100%;
-      background-color: $traditional-black;
-    }
-
-    .buffer {
+    .section-buffer {
       width: 100%;
       height: 20rem;
-      background-color: $traditional-bg-black;
+      background-color: $bg-black-t;
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-
-    .traditional-contact-section {
-      width: 100%;
-      background-color: $traditional-black;
     }
 
     .section-heading {
       text-align: center;
       text-transform: uppercase;
       font-size: 2rem;
-      color: $traditional-off-white;
+      color: $off-white;
       font-family: "Raleway";
     }
 
     .sub-heading {
       font-size: 1.5rem;
-      color: $traditional-blue;
+      color: $l-purp;
       font-family: "Roboto-M";
     }
   }
@@ -54,13 +46,13 @@
 
 @media only screen and (min-width: 0px) and (max-width: 1024px),
   only screen and (min-device-width: 0px) and (max-width: 1024px) {
-  .traditional-layout {
+  .page-layout {
     background-image: none;
-    .traditional-content {
+    .page-content {
       min-width: 0;
-      .buffer {
+      .section-buffer {
         height: 10rem;
-        background-color: $traditional-d-blue;
+        background-color: $d-purp;
       }
     }
   }

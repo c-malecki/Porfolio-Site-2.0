@@ -1,2 +1,2 @@
 export * from "./App/App";
-export * from "./TraditionalPage/TraditionalPage";
+export * from "./PageLayout/PageLayout";

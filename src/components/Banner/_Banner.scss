@@ -1,15 +1,15 @@
-.tradition-banner {
+.banner-container {
   height: 100vh;
   background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  .banner-inner-container {
+  .banner-inner {
     position: relative;
     height: 100vh;
     width: 100%;
-    background-color: $bg-black;
+    background-color: $bg-black-t;
 
     .diamond {
       position: absolute;
@@ -17,7 +17,7 @@
       left: 50%;
       transform: translate(-50%, -50%) rotate(45deg);
       -webkit-transform: translate(-50%, -50%) rotate(45deg);
-      border: 1px solid $traditional-off-white;
+      border: 1px solid $off-white;
 
       width: 16em;
       height: 16em;
@@ -28,7 +28,7 @@
         left: 50%;
         transform: translate(-50%, -50%) rotate(-45deg);
         -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-        color: $traditional-off-white;
+        color: $off-white;
         font-family: "Raleway";
         text-transform: uppercase;
         font-size: 2rem;
@@ -43,12 +43,12 @@
 
 @media only screen and (min-width: 0px) and (max-width: 1024px),
   only screen and (min-device-width: 0px) and (max-width: 1024px) {
-  .tradition-banner {
+  .banner-container {
     height: 60vh;
     background: center / cover no-repeat
       url("https://portfolio-site-imgs.s3.us-east-2.amazonaws.com/mobilebanner.jpg");
 
-    .banner-inner-container {
+    .banner-inner {
       position: relative;
       height: 60vh;
       width: 100%;

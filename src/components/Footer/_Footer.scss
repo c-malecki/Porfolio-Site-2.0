@@ -1,26 +1,26 @@
-.traditional-footer {
+.footer-container {
   display: flex;
   flex-direction: column;
   height: 6rem;
   padding: 2rem 0;
-  background-color: $traditional-black;
+  background-color: $bg-black;
 
   .footer-icons {
     margin: auto;
     i {
-      color: white;
+      color: $off-white;
       margin: auto 1rem;
       font-size: 3rem;
     }
 
     @media (hover: hover) {
       i:hover {
-        color: $traditional-blue;
+        color: $l-purp;
       }
     }
   }
   span {
-    color: white;
+    color: $off-white;
     margin: auto;
     font-family: "Roboto-R";
   }
