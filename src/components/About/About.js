@@ -1,10 +1,8 @@
 import React, { useContext, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
-import profile from "../../../assets/images/biggerprofile.png";
-import { AppContext } from "../../../context/AppContext";
+import { AppContext } from "../../context/AppContext";
 
 export const About = () => {
-  const { changePage, getRef } = useContext(AppContext);
+  const { getRef } = useContext(AppContext);
   const about = useRef();
   useEffect(() => {
     getRef(about.current);
@@ -16,15 +14,14 @@ export const About = () => {
           <div className="about-wrapper">
             <h3 className="sub-heading">Who am I?</h3>
             <div className="about-img">
-              <img src={profile} alt="Chris Malecki" />
+              <img
+                src="https://portfolio-site-imgs.s3.us-east-2.amazonaws.com/profile.jpg"
+                alt="Chris Malecki"
+              />
             </div>
             <p>
               I am a musician, lover of games, and I enjoy pushing the
-              boundaries of creativity and logic. Be sure to check out my{" "}
-              <Link to="/fun" onClick={() => changePage(0)}>
-                alternate layout
-              </Link>{" "}
-              theme to see what I mean!
+              boundaries of creativity and logic.
             </p>
           </div>
         </div>

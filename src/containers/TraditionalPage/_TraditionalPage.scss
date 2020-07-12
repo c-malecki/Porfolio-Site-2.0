@@ -1,7 +1,8 @@
 .traditional-layout {
   display: flex;
   flex-direction: column;
-  background: center / cover no-repeat url("../../assets/images/tbanner.png");
+  background: center / cover no-repeat
+    url("https://portfolio-site-imgs.s3.us-east-2.amazonaws.com/background.jpg");
   background-attachment: fixed;
 
   .traditional-content {

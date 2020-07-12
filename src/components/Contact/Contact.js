@@ -1,5 +1,5 @@
 import React from "react";
-import { TraditionalEmailForm } from "../../index";
+import { TraditionalEmailForm } from "../index";
 
 export const Contact = () => {
   return (

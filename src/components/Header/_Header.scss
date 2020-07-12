@@ -30,28 +30,6 @@
       display: none;
     }
 
-    .toggle-container {
-      display: flex;
-      flex-direction: column;
-      margin-left: 1rem;
-      z-index: 5;
-
-      a {
-        text-decoration: none;
-        font-weight: bold;
-        font-family: "Roboto-R";
-        color: $traditional-blue;
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        padding: 0.5rem;
-      }
-
-      @media (hover: hover) {
-        a:hover {
-          background-color: rgba(255, 255, 255, 0.2);
-        }
-      }
-    }
-
     .hash-links-container {
       margin-left: auto;
 
@@ -107,7 +85,6 @@
         align-items: center;
         height: 14rem;
         z-index: -1;
-        border-top: 1px solid rgba(255, 255, 255, 0.6);
         border-bottom: 1px solid rgba(255, 255, 255, 0.6);
 
         a {

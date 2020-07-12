@@ -1,13 +1,12 @@
 import React, { useState, useContext, useEffect } from "react";
-import { TraditionalMobileMenu } from "../../index";
+import { TraditionalMobileMenu } from "../index";
 import { HashLink } from "react-router-hash-link";
-import { Link } from "react-router-dom";
-import { AppContext } from "../../../context/AppContext";
+import { AppContext } from "../../context/AppContext";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const { changePage, changeToFixed, toFixed, elRef } = useContext(AppContext);
+  const { changeToFixed, toFixed, elRef } = useContext(AppContext);
   useEffect(() => {
     if (elRef) {
       const handleYScroll = () => {
@@ -28,11 +27,6 @@ export const Header = () => {
   return (
     <div className={`header-z ${toFixed ? "fixed" : ""}`}>
       <div className="header-container">
-        <div className="toggle-container">
-          <Link to="/fun" onClick={() => changePage(0)}>
-            Make it fun!
-          </Link>
-        </div>
         <div className="hash-links-container">
           <div className="hash-links-menu">
             <HashLink smooth to="/#home">

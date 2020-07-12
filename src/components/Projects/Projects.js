@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { AppContext } from "../../../context/AppContext";
-import { ProjectCard } from "../../index";
+import { AppContext } from "../../context/AppContext";
+import { ProjectCard } from "../index";
 
 export const Projects = () => {
   const { projects } = useContext(AppContext);
