@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
 
 export const MobileNav = (props) => {
-  const { isOpen } = props;
+  const { isOpen, toggle } = props;
+  const mobileNav = useRef(null);
+  useEffect(() => {
+    const mRef = mobileNav.current;
+    if (mobileNav) {
+      const menuBlur = (event) => {
+        if (isOpen && !mRef.contains(event.target)) {
+          toggle();
+        }
+      };
+      document.addEventListener("touchend", menuBlur);
+      return () => {
+        document.removeEventListener("touchend", menuBlur);
+      };
+    }
+  }, [isOpen, toggle]);
   return (
-    <div className={`MobileNav-container ${isOpen ? "open-mobile" : ""}`}>
+    <div
+      className={`MobileNav-container ${isOpen ? "open-mobile" : ""}`}
+      ref={mobileNav}
+    >
       <div className="MobileNav-content">
         <HashLink smooth to="/#home">
           Home

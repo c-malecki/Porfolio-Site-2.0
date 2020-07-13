@@ -8,37 +8,44 @@
   .name-input,
   .your-email {
     height: 1.4rem;
-    width: 18rem;
+    width: 100%;
     background: $off-white;
     color: $bg-black;
-    margin: auto;
-    border: 2px solid $bg-black;
+    margin: auto auto 0.5rem auto;
+    border: 1px solid $bg-black;
+    padding: 0.2rem;
+    font-family: "Roboto-R";
   }
   .message-input {
-    width: 18rem;
+    width: 100%;
     min-height: 6rem;
     background: $off-white;
     color: $bg-black;
-    margin: auto;
-    border: 2px solid $bg-black;
+    margin: auto auto 0.3rem auto;
+    border: 1px solid $bg-black;
+    padding: 0.2rem;
+    font-family: "Roboto-R";
   }
 
   .email-submit-button {
     display: block;
     margin: auto;
-    background: $off-white;
-    border: 2px solid $bg-black;
-    border-radius: 4px;
+    font-size: 1.2rem;
+    width: 165px;
+    font-family: "Raleway";
+    background-color: transparent;
+    color: white;
+    border: 1px solid $border-gray;
     text-transform: uppercase;
     font-weight: bold;
     padding: 4px 8px;
     cursor: pointer;
-    font-family: "Roboto-R";
   }
 
   @media (hover: hover) {
     .email-submit-button:hover {
-      background: $l-purp;
+      background-color: $hover-gray;
+      color: $l-purp;
     }
   }
 }

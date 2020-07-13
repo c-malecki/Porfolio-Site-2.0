@@ -7,6 +7,9 @@ import { MobileNav } from "./MobileNav/MobileNav";
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { changeToFixed, toFixed, elRef } = useContext(AppContext);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
   useEffect(() => {
     if (elRef) {
       const handleYScroll = () => {
@@ -20,16 +23,13 @@ export const Header = () => {
       };
     }
   }, [elRef, changeToFixed]);
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
   return (
     <div className={`Header-container ${toFixed ? "fixed" : ""}`}>
       <div className="Header-content">
         <HashLinksNav />
         <MobileMenuButton toggle={toggleMenu} isOpen={isOpen} />
       </div>
-      <MobileNav isOpen={isOpen} />
+      <MobileNav isOpen={isOpen} toggle={toggleMenu} />
     </div>
   );
 };

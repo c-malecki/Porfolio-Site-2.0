@@ -64,3 +64,26 @@
     }
   }
 }
+
+@media only screen and (min-width: 0px) and (max-width: 1024px) and (orientation: landscape),
+  only screen and (min-device-width: 0px) and (max-width: 1024px) and (orientation: landscape) {
+  .adjustToHeader {
+    margin-top: 0px;
+  }
+  .banner-container {
+    height: 100vh;
+    background: center / cover no-repeat
+      url("https://portfolio-site-imgs.s3.us-east-2.amazonaws.com/mobilebanner.jpg");
+
+    .banner-inner {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+
+      .diamond {
+        width: 12em;
+        height: 12em;
+      }
+    }
+  }
+}
