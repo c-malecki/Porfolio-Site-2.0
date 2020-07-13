@@ -6,6 +6,7 @@ import { MobileNav } from "./MobileNav/MobileNav";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [menuButtonRef, setMenuButtonRef] = useState(null);
   const { changeToFixed, toFixed, elRef } = useContext(AppContext);
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -27,9 +28,17 @@ export const Header = () => {
     <div className={`Header-container ${toFixed ? "fixed" : ""}`}>
       <div className="Header-content">
         <HashLinksNav />
-        <MobileMenuButton toggle={toggleMenu} isOpen={isOpen} />
+        <MobileMenuButton
+          toggle={toggleMenu}
+          isOpen={isOpen}
+          getRef={setMenuButtonRef}
+        />
       </div>
-      <MobileNav isOpen={isOpen} toggle={toggleMenu} />
+      <MobileNav
+        isOpen={isOpen}
+        toggle={toggleMenu}
+        menuButton={menuButtonRef}
+      />
     </div>
   );
 };

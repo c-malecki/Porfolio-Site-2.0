@@ -2,13 +2,17 @@ import React, { useRef, useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
 
 export const MobileNav = (props) => {
-  const { isOpen, toggle } = props;
+  const { isOpen, toggle, menuButton } = props;
   const mobileNav = useRef(null);
   useEffect(() => {
     const mRef = mobileNav.current;
     if (mobileNav) {
       const menuBlur = (event) => {
-        if (isOpen && !mRef.contains(event.target)) {
+        if (
+          isOpen &&
+          !mRef.contains(event.target) &&
+          !menuButton.contains(event.target)
+        ) {
           toggle();
         }
       };
@@ -17,7 +21,7 @@ export const MobileNav = (props) => {
         document.removeEventListener("touchend", menuBlur);
       };
     }
-  }, [isOpen, toggle]);
+  }, [isOpen, toggle, menuButton]);
   return (
     <div
       className={`MobileNav-container ${isOpen ? "open-mobile" : ""}`}
