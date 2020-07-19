@@ -1,35 +1,44 @@
 @import "./ProjectCard/ProjectCard";
 @import "./ProjectInfo/ProjectInfo";
 
-.Projects-container {
-  @extend %section;
-  color: $off-white;
-  padding: 1rem 0;
-
-  .Projects-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+.Project-wrapper {
+  width: 100%;
+  .Project-container {
+    @extend %section;
+    color: $off-white;
     padding: 1rem 0;
 
-    .Projects-col {
+    .Project-row {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 50%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 1rem 0;
+
+      .Project-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+      }
     }
   }
 }
 
+.Project-wrapper:nth-of-type(2) {
+  background-color: $bg-black-l;
+}
+
 @media only screen and (min-width: 0px) and (max-width: 1024px),
   only screen and (min-device-width: 0px) and (max-width: 1024px) {
-  .Projects-container {
-    width: 90%;
+  .Project-wrapper {
+    .Project-container {
+      width: 90%;
 
-    .Projects-row {
-      .Projects-col {
-        width: 90vw;
+      .Project-row {
+        .Project-col {
+          width: 90vw;
+        }
       }
     }
   }

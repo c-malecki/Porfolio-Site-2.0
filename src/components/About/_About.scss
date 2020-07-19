@@ -16,6 +16,7 @@
 
       .about-text-wrapper {
         border: 1px solid $border-gray;
+        background-color: $bg-black-l;
         height: 100%;
 
         .about-img {
@@ -57,6 +58,7 @@
 
         .about-text-wrapper {
           border: none;
+          background-color: transparent;
         }
 
         .about-img {

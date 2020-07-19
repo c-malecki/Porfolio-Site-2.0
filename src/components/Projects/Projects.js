@@ -6,23 +6,27 @@ import { ProjectInfo } from "./ProjectInfo/ProjectInfo";
 export const Projects = () => {
   const { projects } = useContext(AppContext);
   return (
-    <div className="Projects-container">
+    <>
       {projects.map((project) => (
-        <div className="Projects-row" key={project.title}>
-          <div className="Projects-col">
-            <ProjectCard pic={project.pic} alt={project.alt} />
-          </div>
-          <div className="Projects-col">
-            <ProjectInfo
-              title={project.title}
-              description={project.description}
-              tech={project.tech}
-              github={project.github}
-              demo={project.demo}
-            />
+        <div className="Project-wrapper" key={project.title}>
+          <div className="Project-container">
+            <div className="Project-row">
+              <div className="Project-col">
+                <ProjectCard pic={project.pic} alt={project.alt} />
+              </div>
+              <div className="Project-col">
+                <ProjectInfo
+                  title={project.title}
+                  description={project.description}
+                  tech={project.tech}
+                  github={project.github}
+                  demo={project.demo}
+                />
+              </div>
+            </div>
           </div>
         </div>
       ))}
-    </div>
+    </>
   );
 };
