@@ -17,7 +17,10 @@ export const Projects = () => {
               <div className="Project-col">
                 <ProjectInfo
                   title={project.title}
+                  time={project.time}
                   description={project.description}
+                  link={project.link}
+                  link_text={project.link_text}
                   tech={project.tech}
                   github={project.github}
                   demo={project.demo}

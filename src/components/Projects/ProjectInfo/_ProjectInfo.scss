@@ -7,6 +7,17 @@
     font-size: 1.2rem;
     font-family: "Roboto-R";
     padding-right: 20%;
+
+    a {
+      text-decoration: none;
+      color: rgb(27, 107, 255);
+      font-weight: bold;
+    }
+  }
+
+  p:nth-of-type(1) {
+    margin-block-start: 0;
+    margin-block-end: 0.5rem;
   }
 
   .ProjectInfo-links {
@@ -44,6 +55,10 @@
       width: 80%;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    p:nth-of-type(1) {
+      text-align: center;
     }
     .tech-p {
       text-align: center;
