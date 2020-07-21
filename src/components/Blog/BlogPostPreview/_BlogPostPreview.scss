@@ -1,0 +1,38 @@
+.BlogPostPreview-container {
+  display: inline-block;
+  height: 30rem;
+  width: 18rem;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  overflow: hidden;
+  background-color: $bg-black-t;
+  text-decoration: none;
+
+  .BlogPostPreview-img-container {
+    height: 18rem;
+    width: 100%;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .BlogPostPreview-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    color: $off-white;
+
+    h3 {
+      text-align: center;
+      margin-block-end: 0.5rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 768px),
+  only screen and (min-device-width: 0px) and (max-width: 768px) {
+  .BlogPostPreview-container {
+    margin: 1rem auto;
+  }
+}

@@ -1,0 +1,32 @@
+.BlogPage-container {
+  display: flex;
+  flex-direction: column;
+  background: center / cover no-repeat
+    url("https://portfolio-site-imgs.s3.us-east-2.amazonaws.com/background.jpg");
+  background-attachment: fixed;
+  min-height: 100vh;
+
+  .BlogPage-overlay {
+    background-color: $bg-black-t;
+    min-height: 100vh;
+    width: 100%;
+
+    .BlogPage-content {
+      .nav-link {
+        @extend %nav-link;
+      }
+
+      @media (hover: hover) {
+        .nav-link:hover {
+          background-color: $hover-gray;
+          color: $l-purp;
+        }
+      }
+      h1 {
+        color: $off-white;
+        margin: 2rem 0;
+      }
+      @extend %section;
+    }
+  }
+}

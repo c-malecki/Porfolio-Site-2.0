@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 
 export const MobileNav = (props) => {
   const { isOpen, toggle, menuButton } = props;
@@ -40,6 +41,7 @@ export const MobileNav = (props) => {
         <HashLink smooth to="/#contact">
           Contact
         </HashLink>
+        <Link to="blog">Blog</Link>
       </div>
     </div>
   );

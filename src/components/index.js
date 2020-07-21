@@ -9,3 +9,7 @@ export * from "./Projects/Projects";
 export * from "./Contact/Contact";
 //
 export * from "./Footer/Footer";
+//
+export * from "./Blog/SingleBlogPost/SingleBlogPost";
+export * from "./Blog/BlogPostPreview/BlogPostPreview";
+export * from "./Blog/FeaturedPostsWidget/FeaturePostsWidget";

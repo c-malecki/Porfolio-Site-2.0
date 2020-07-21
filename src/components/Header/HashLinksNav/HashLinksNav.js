@@ -1,5 +1,6 @@
 import React from "react";
 import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 
 export const HashLinksNav = () => {
   return (
@@ -16,6 +17,7 @@ export const HashLinksNav = () => {
       <HashLink smooth to="/#contact">
         Contact
       </HashLink>
+      <Link to="/blog">Blog</Link>
     </div>
   );
 };
