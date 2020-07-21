@@ -38,15 +38,8 @@
   }
 }
 
-.adjustToHeader {
-  margin-top: 56px;
-}
-
 @media only screen and (min-width: 0px) and (max-width: 1024px),
   only screen and (min-device-width: 0px) and (max-width: 1024px) {
-  .adjustToHeader {
-    margin-top: 0px;
-  }
   .banner-container {
     height: 60vh;
     background: center / cover no-repeat
@@ -67,9 +60,6 @@
 
 @media only screen and (min-width: 0px) and (max-width: 1024px) and (orientation: landscape),
   only screen and (min-device-width: 0px) and (max-width: 1024px) and (orientation: landscape) {
-  .adjustToHeader {
-    margin-top: 0px;
-  }
   .banner-container {
     height: 100vh;
     background: center / cover no-repeat

@@ -1,13 +1,8 @@
-import React, { useContext } from "react";
-import { AppContext } from "../../context/AppContext";
+import React from "react";
 
 export const Banner = () => {
-  const { toFixed } = useContext(AppContext);
   return (
-    <div
-      className={`banner-container ${toFixed ? "adjustToHeader" : ""}`}
-      id="home"
-    >
+    <div className="banner-container" id="home">
       <div className="banner-inner">
         <div className="diamond">
           <span>welcome</span>

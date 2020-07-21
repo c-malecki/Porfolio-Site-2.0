@@ -8,10 +8,11 @@
 
   .BlogPage-overlay {
     background-color: $bg-black-t;
-    min-height: 100vh;
     width: 100%;
+    min-height: 100vh;
 
     .BlogPage-content {
+      margin-top: 5rem;
       .nav-link {
         @extend %nav-link;
       }
@@ -22,11 +23,31 @@
           color: $l-purp;
         }
       }
-      h1 {
-        color: $off-white;
-        margin: 2rem 0;
-      }
       @extend %section;
+    }
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 1024px),
+  only screen and (min-device-width: 0px) and (max-width: 1024px) {
+  .BlogPage-container {
+    background: center / cover no-repeat
+      url("https://portfolio-site-imgs.s3.us-east-2.amazonaws.com/background.jpg");
+    background-attachment: scroll;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 768px),
+  only screen and (min-device-width: 0px) and (max-width: 768px) {
+  .BlogPage-container {
+    background: center / cover no-repeat
+      url("https://portfolio-site-imgs.s3.us-east-2.amazonaws.com/background.jpg");
+    background-attachment: scroll;
+
+    .BlogPage-overlay {
+      .BlogPage-content {
+        margin-top: 0;
+      }
     }
   }
 }

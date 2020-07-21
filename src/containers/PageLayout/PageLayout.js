@@ -1,5 +1,4 @@
-import React, { useContext, useRef, useEffect } from "react";
-import { AppContext } from "../../context/AppContext";
+import React from "react";
 import {
   Banner,
   About,
@@ -10,17 +9,12 @@ import {
 } from "../../components/index";
 
 export const PageLayout = (props) => {
-  const { getRef } = useContext(AppContext);
-  const about = useRef();
-  useEffect(() => {
-    getRef(about.current);
-  }, [getRef]);
   return (
     <div className="page-layout">
       <Header />
       <Banner />
       <div className="page-content">
-        <div className="page-about-section" id="about" ref={about}>
+        <div className="page-about-section" id="about">
           <About />
         </div>
         <div className="section-buffer">

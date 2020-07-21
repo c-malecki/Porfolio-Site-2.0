@@ -1,10 +1,9 @@
-import React, { useContext } from "react";
-import { AppContext } from "../../context/AppContext";
+import React from "react";
 import { ProjectCard } from "./ProjectCard/ProjectCard";
 import { ProjectInfo } from "./ProjectInfo/ProjectInfo";
+import { projects } from "../../context/projectsData";
 
 export const Projects = () => {
-  const { projects } = useContext(AppContext);
   return (
     <>
       {projects.map((project) => (

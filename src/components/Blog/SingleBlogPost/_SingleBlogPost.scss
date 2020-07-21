@@ -36,10 +36,34 @@
 
     .SinglePost-intro-img {
       margin: 1rem auto;
+      width: 25rem;
+      height: 21rem;
     }
   }
 
   .SinglePost-body {
     font-size: 1.1rem;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 768px),
+  only screen and (min-device-width: 0px) and (max-width: 768px) {
+  .SingleBlogPost-container {
+    border-radius: 0;
+    margin: auto;
+    position: relative;
+
+    .back-to-blog {
+      position: fixed;
+      top: 0.5rem;
+      z-index: 11;
+    }
+    .SinglePost-intro {
+      margin-top: 3rem;
+      .SinglePost-intro-img {
+        width: 18rem;
+        height: 15rem;
+      }
+    }
   }
 }

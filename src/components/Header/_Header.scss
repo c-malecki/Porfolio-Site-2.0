@@ -4,8 +4,8 @@
 
 .Header-container {
   width: 100%;
-  position: relative;
-  background-color: $bg-black-t;
+  position: fixed;
+  z-index: 10;
   .Header-content {
     position: relative;
     display: flex;
@@ -15,22 +15,5 @@
     max-width: 1500px;
     margin: auto;
     z-index: 10;
-  }
-}
-
-.fixed {
-  position: fixed;
-  background-color: transparent;
-}
-
-@media only screen and (min-width: 0px) and (max-width: 1024px),
-  only screen and (min-device-width: 0px) and (max-width: 1024px) {
-  .Header-container {
-    position: fixed;
-    background-color: transparent;
-    z-index: 10;
-    .Header-content {
-      position: relative;
-    }
   }
 }
