@@ -1,6 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+const utilPostPreviewDescription = (string) => {
+  return string.split(" ").slice(0, 22).join(" ");
+};
+
 export const BlogPostPreview = (props) => {
   const { slug, img, title, date, description } = props;
   return (
@@ -11,7 +15,7 @@ export const BlogPostPreview = (props) => {
       <div className="BlogPostPreview-content">
         <small>{date}</small>
         <h3>{title}</h3>
-        <p>{description}</p>
+        <p>{utilPostPreviewDescription(description) + "..."}</p>
       </div>
     </Link>
   );
