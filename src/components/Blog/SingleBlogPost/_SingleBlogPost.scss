@@ -3,7 +3,7 @@
   flex-direction: column;
   max-width: 768px;
   margin: auto auto 1rem auto;
-  background-color: $bg-black-t;
+  background-color: $bg-single-post;
   padding: 1rem;
   border-radius: 0.3rem;
   box-sizing: border-box;
@@ -36,7 +36,6 @@
 
     .SinglePost-intro-img {
       margin: 1rem auto;
-      width: 25rem;
       height: 21rem;
     }
   }
@@ -61,7 +60,6 @@
     .SinglePost-intro {
       margin-top: 3rem;
       .SinglePost-intro-img {
-        width: 18rem;
         height: 15rem;
       }
     }

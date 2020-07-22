@@ -13,3 +13,5 @@ export * from "./Footer/Footer";
 export * from "./Blog/SingleBlogPost/SingleBlogPost";
 export * from "./Blog/BlogPostPreview/BlogPostPreview";
 export * from "./Blog/FeaturedPostsWidget/FeaturePostsWidget";
+export * from "./Blog/FlagshipPost/FlagshipPost";
+export * from "./Blog/BlogHome/BlogHome";
