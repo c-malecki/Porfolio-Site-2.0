@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { BlogContext } from "../../../context/BlogContext";
-import { reformatDate } from "../../../assets/util/dates";
+import { BlogContext } from "../../../../context/BlogContext";
+import { reformatDate } from "../../../../assets/util/dates";
 
 export const FlagshipPost = () => {
   const { isLoading, posts } = useContext(BlogContext);
@@ -26,10 +26,5 @@ export const FlagshipPost = () => {
       );
     }
   };
-  return (
-    <div className="FlagshipPost-container">
-      <h2>Welcome</h2>
-      {flagshipPostContent()}
-    </div>
-  );
+  return <>{flagshipPostContent()}</>;
 };

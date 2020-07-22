@@ -1,0 +1,14 @@
+.BlogSideWidget-container {
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  background-color: $bg-blog-ui;
+  border-radius: 0.3rem;
+  padding: 1rem;
+  margin-left: auto;
+
+  h2 {
+    color: $off-white;
+    margin: 0.5rem 1rem 1rem 0rem;
+  }
+}

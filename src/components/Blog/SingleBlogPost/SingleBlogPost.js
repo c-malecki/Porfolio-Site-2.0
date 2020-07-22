@@ -52,6 +52,11 @@ export const SingleBlogPost = () => {
               src={post.featured_image.fields.file.url}
               alt={post.title}
             />
+            {post.image_caption ? (
+              <span className="SinglePost-intro-imgcaption">
+                {post.image_caption}
+              </span>
+            ) : null}
           </div>
 
           <div className="SinglePost-body">

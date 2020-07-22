@@ -1,0 +1,31 @@
+.FlagshipPost-content {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  overflow: hidden;
+  background-color: $bg-black-t;
+  text-decoration: none;
+  margin: auto;
+
+  .FlagshipPost-img-container {
+    height: 14rem;
+    width: 15rem;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .FlagshipPost-info {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    color: $off-white;
+
+    h3 {
+      text-align: center;
+      margin-block-end: 0.5rem;
+    }
+  }
+}

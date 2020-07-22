@@ -3,7 +3,7 @@
   flex-direction: column;
   max-width: 768px;
   margin: auto auto 1rem auto;
-  background-color: $bg-single-post;
+  background-color: $bg-blog-ui;
   padding: 1rem;
   border-radius: 0.3rem;
   box-sizing: border-box;
@@ -36,7 +36,15 @@
 
     .SinglePost-intro-img {
       margin: 1rem auto;
-      height: 21rem;
+
+      max-height: 100%;
+      height: auto;
+      max-width: 100%;
+      width: auto;
+    }
+
+    .SinglePost-intro-imgcaption {
+      text-align: center;
     }
   }
 

@@ -1,13 +1,12 @@
 .FeaturedPostsWidget-container {
-  display: flex;
-  flex-direction: column;
-  background-color: $bg-black-t;
+  background-color: $bg-blog-ui;
   border-radius: 0.3rem;
   padding: 1rem;
+  margin: auto;
 
   h2 {
     color: $off-white;
-    margin: 1rem;
+    margin: 0.5rem 1rem 1rem 1rem;
   }
 
   .FeaturedPostsWidget-content {
@@ -20,9 +19,14 @@
 @media only screen and (min-width: 0px) and (max-width: 768px),
   only screen and (min-device-width: 0px) and (max-width: 768px) {
   .FeaturedPostsWidget-container {
+    margin: auto 0;
     border-radius: 0;
     h2 {
       text-align: center;
+    }
+
+    .FeaturedPostsWidget-content {
+      flex-direction: column;
     }
   }
 }
