@@ -42,9 +42,9 @@
   }
 }
 
-@media only screen and (min-width: 0px) and (max-width: 1024px),
-  only screen and (min-device-width: 0px) and (max-width: 1024px) {
+@media only screen and (min-width: 0px) and (max-width: 768px),
+  only screen and (min-device-width: 0px) and (max-width: 768px) {
   .BlogPostPreview-container {
-    margin: 1rem auto;
+    margin: 0.5rem auto;
   }
 }

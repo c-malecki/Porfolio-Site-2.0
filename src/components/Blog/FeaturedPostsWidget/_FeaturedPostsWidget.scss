@@ -2,7 +2,8 @@
   background-color: $bg-blog-ui;
   border-radius: 0.3rem;
   padding: 1rem;
-  margin: auto;
+  max-width: 960px;
+  margin: auto auto 2rem auto;
 
   h2 {
     color: $off-white;
