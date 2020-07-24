@@ -3,6 +3,11 @@
   min-height: 100vh;
   background-color: $d-purp;
 
+  .Header-container {
+    position: relative;
+    background-color: $bg-black-l;
+  }
+
   .BlogPage-container {
     position: relative;
     display: flex;
@@ -11,7 +16,7 @@
     width: 100%;
     max-width: 1500px;
     margin: auto;
-    padding-top: 5rem;
+    padding-top: 2rem;
 
     .BlogPage-content-col1 {
       min-height: 100vh;
@@ -27,9 +32,27 @@
   }
 }
 
+@media only screen and (min-width: 0px) and (max-width: 1024px),
+  only screen and (min-device-width: 0px) and (max-width: 1024px) {
+  .BlogPage-wrapper {
+    .Header-container {
+      position: fixed;
+      background-color: transparent;
+    }
+
+    .BlogPage-container {
+      padding-top: 5rem;
+    }
+  }
+}
+
 @media only screen and (min-width: 0px) and (max-width: 768px),
   only screen and (min-device-width: 0px) and (max-width: 768px) {
   .BlogPage-wrapper {
+    .Header-container {
+      background-color: transparent;
+    }
+
     .BlogPage-container {
       flex-direction: column;
       .BlogPage-content-col1 {
