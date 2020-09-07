@@ -24,15 +24,15 @@ export const projects = [
     github: "https://github.com/codefordayton/floswhistle-pandemic-v2",
     demo: "https://beta.floswhistle.org/results",
   },
-  {
-    pic: "https://portfolio-site-imgs.s3.us-east-2.amazonaws.com/Lod.png",
-    alt: "Diablo 2 character calculator",
-    title: "Diablo II Calculator",
-    time: "February 2020 - May 2020",
-    description:
-      "Complex calculator for Diablo II designed for theory crafting and character build sharing with a companion public resource REST API. Development is currently discontinued.",
-    tech: "React, Redux, Node/Express, MongoDB",
-    github: "https://github.com/c-malecki/pod-character-calculator",
-    demo: "https://diabloii-cc.netlify.app/",
-  },
+  // {
+  //   pic: "https://portfolio-site-imgs.s3.us-east-2.amazonaws.com/Lod.png",
+  //   alt: "Diablo 2 character calculator",
+  //   title: "Diablo II Calculator",
+  //   time: "February 2020 - May 2020",
+  //   description:
+  //     "Complex calculator for Diablo II designed for theory crafting and character build sharing with a companion public resource REST API. Development is currently discontinued.",
+  //   tech: "React, Redux, Node/Express, MongoDB",
+  //   github: "https://github.com/c-malecki/pod-character-calculator",
+  //   demo: "https://diabloii-cc.netlify.app/",
+  // },
 ];
