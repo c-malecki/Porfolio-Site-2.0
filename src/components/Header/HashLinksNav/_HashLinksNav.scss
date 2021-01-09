@@ -13,11 +13,12 @@
     border: 1px solid $border-gray;
     padding: 0.5rem;
     z-index: 1;
+    border-radius: 4px;
+    background-color: $bg-black-t;
   }
 
   @media (hover: hover) {
     a:hover {
-      background-color: $hover-gray;
       color: $l-purp;
     }
   }

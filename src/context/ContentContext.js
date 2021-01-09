@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from "react";
-import { getBlogPosts } from "./contentful/client";
+import { getSiteContent } from "./contentful/client";
 
 export const ContentContext = createContext();
 
@@ -11,11 +11,12 @@ export const ContentContextProvider = ({ children }) => {
     error: null,
   });
   useEffect(() => {
-    getBlogPosts()
+    getSiteContent()
       .then((res) => {
         const allContent = res.map((p) => p.fields);
-        const projects = allContent.filter((c) => c.contentType === "project");
-        const blogPosts = allContent.filter((c) => c.contentType === undefined);
+        const projects = allContent.filter((c) => c.type === "project");
+        const blogPosts = allContent.filter((c) => c.type === "blog_post");
+        const pageContent = allContent.filter((c) => c.type === "page_content");
 
         const allPostsSorted = blogPosts.sort((a, b) => {
           const dateA = new Date(a.date);
@@ -26,6 +27,7 @@ export const ContentContextProvider = ({ children }) => {
           isLoading: false,
           posts: allPostsSorted,
           projects: projects,
+          pageContent: pageContent,
           error: null,
         });
       })
@@ -34,6 +36,7 @@ export const ContentContextProvider = ({ children }) => {
           isLoading: false,
           posts: null,
           projects: null,
+          pageContent: null,
           error: error.message,
         })
       );

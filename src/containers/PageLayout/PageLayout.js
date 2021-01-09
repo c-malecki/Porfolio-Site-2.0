@@ -1,36 +1,36 @@
-import React from "react";
-import {
-  Banner,
-  About,
-  Projects,
-  Contact,
-  Footer,
-  Header,
-} from "../../components/index";
+import React, { useContext } from "react";
+import { ContentContext } from "../../context/ContentContext";
+import { Banner, About, Projects, Contact, Footer, Header, Loader } from "../../components/index";
 
 export const PageLayout = (props) => {
-  return (
-    <div className="page-layout">
-      <Header />
-      <Banner />
-      <div className="page-content">
-        <div className="page-about-section" id="about">
-          <About />
+  const { isLoading, error } = useContext(ContentContext);
+  const renderSite = () => {
+    if (isLoading) {
+      return <Loader />;
+    }
+    if (error) {
+      return <div>error</div>;
+    }
+    return (
+      <div className="page-layout">
+        <Header />
+        <Banner />
+        <div className="page-content">
+          <div id="about">
+            <About />
+          </div>
+
+          <div id="projects">
+            <Projects />
+          </div>
+
+          <div id="contact">
+            <Contact />
+          </div>
         </div>
-        <div className="section-buffer">
-          <h2 className="section-heading">Projects</h2>
-        </div>
-        <div className="page-projects-section" id="projects">
-          <Projects />
-        </div>
-        <div className="section-buffer">
-          <h2 className="section-heading">Contact</h2>
-        </div>
-        <div className="page-contact-section" id="contact">
-          <Contact />
-        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
-  );
+    );
+  };
+  return <>{renderSite()}</>;
 };

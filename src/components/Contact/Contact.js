@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ContentContext } from "../../context/ContentContext";
+import ReactMarkdown from "react-markdown";
 import { EmailForm } from "./EmailForm/EmailForm";
 
 export const Contact = () => {
+  const { pageContent } = useContext(ContentContext);
+  const { contactCaption } = pageContent[0];
   return (
     <div className="contact-container">
       <div className="contact-row">
-        <p>
-          Do you like what you see? Shoot me a message with any questions or
-          feedback. I'd be happy to hear from you.
-        </p>
+        <ReactMarkdown>{contactCaption}</ReactMarkdown>
         <div className="contact-form-container">
           <EmailForm />
         </div>

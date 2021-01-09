@@ -3,7 +3,7 @@ const client = require("contentful").createClient({
   accessToken: process.env.REACT_APP_API_KEY,
 });
 
-export const getBlogPosts = () => client.getEntries().then((res) => res.items);
+export const getSiteContent = () => client.getEntries().then((res) => res.items);
 
 export const getSinglePost = (slug) =>
   client

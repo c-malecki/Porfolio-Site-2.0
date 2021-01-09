@@ -1,9 +1,7 @@
 .page-layout {
   display: flex;
   flex-direction: column;
-  background: center / cover no-repeat
-    url("https://portfolio-site-imgs.s3.us-east-2.amazonaws.com/background.jpg");
-  background-attachment: fixed;
+  background-color: $bg-black;
 
   .page-content {
     display: flex;
@@ -12,35 +10,14 @@
     width: 100%;
     margin: auto;
 
-    .page-about-section,
-    .page-projects-section,
-    .page-contact-section {
-      width: 100%;
-      background-color: $bg-black;
-    }
-
-    .section-buffer {
-      width: 100%;
-      height: 20rem;
-      background-color: $bg-black-t;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .section-heading {
-      text-align: center;
-      text-transform: uppercase;
-      font-size: 2rem;
-      color: $off-white;
-      font-family: "Raleway";
-    }
-
     .sub-heading {
       font-size: 1.5rem;
       color: $l-purp;
       font-family: "Roboto-M";
     }
+  }
+  .page-content > div {
+    border-top: 1px solid $bg-black-t;
   }
 }
 
@@ -50,10 +27,6 @@
     background-image: none;
     .page-content {
       min-width: 0;
-      .section-buffer {
-        height: 10rem;
-        background-color: $d-purp;
-      }
     }
   }
 }
