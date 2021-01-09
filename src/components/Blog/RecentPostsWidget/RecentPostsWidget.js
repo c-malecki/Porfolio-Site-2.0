@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import { BlogContext } from "../../../context/BlogContext";
+import { ContentContext } from "../../../context/ContentContext";
 import { BlogPostPreview } from "../../index";
 
 export const RecentPostsWidget = (props) => {
-  const { isLoading, posts } = useContext(BlogContext);
+  const { isLoading, posts } = useContext(ContentContext);
   const postsContent = () => {
     if (isLoading) {
       return <div>loading</div>;

@@ -17,6 +17,7 @@
       font-size: 1.2rem;
       color: $off-white;
       font-family: "Roboto-R";
+      width: 50%;
     }
 
     .contact-form-container {
@@ -26,9 +27,24 @@
   }
 }
 
-@media only screen and (min-width: 0px) and (max-width: 1024px),
-  only screen and (min-device-width: 0px) and (max-width: 1024px) {
+@media only screen and (max-width: 1024px), only screen and (max-width: 1024px) {
   .contact-container {
     width: 90%;
+    .contact-row {
+      p {
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 768px),
+  only screen and (min-device-width: 0px) and (max-width: 768px) {
+  .contact-container {
+    .contact-row {
+      p {
+        width: 100%;
+      }
+    }
   }
 }

@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { BlogContext } from "../../../../context/BlogContext";
+import { ContentContext } from "../../../../context/ContentContext";
 import { reformatDate } from "../../../../assets/util/dates";
 
 export const FlagshipPost = () => {
-  const { isLoading, posts } = useContext(BlogContext);
+  const { isLoading, posts } = useContext(ContentContext);
   const flagshipPostContent = () => {
     if (isLoading) {
       return <div>loading</div>;

@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 export const MobileNav = (props) => {
   const { isOpen, toggle, menuButton } = props;
@@ -9,11 +9,7 @@ export const MobileNav = (props) => {
     const mRef = mobileNav.current;
     if (mobileNav) {
       const menuBlur = (event) => {
-        if (
-          isOpen &&
-          !mRef.contains(event.target) &&
-          !menuButton.contains(event.target)
-        ) {
+        if (isOpen && !mRef.contains(event.target) && !menuButton.contains(event.target)) {
           toggle();
         }
       };
@@ -24,10 +20,7 @@ export const MobileNav = (props) => {
     }
   }, [isOpen, toggle, menuButton]);
   return (
-    <div
-      className={`MobileNav-container ${isOpen ? "open-mobile" : ""}`}
-      ref={mobileNav}
-    >
+    <div className={`MobileNav-container ${isOpen ? "open-mobile" : ""}`} ref={mobileNav}>
       <div className="MobileNav-content">
         <HashLink smooth to="/#home">
           Home
@@ -41,7 +34,7 @@ export const MobileNav = (props) => {
         <HashLink smooth to="/#contact">
           Contact
         </HashLink>
-        <Link to="blog">Blog</Link>
+        {/* <Link to="blog">Blog</Link> */}
       </div>
     </div>
   );

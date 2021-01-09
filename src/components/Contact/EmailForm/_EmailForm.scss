@@ -40,11 +40,12 @@
     font-weight: bold;
     padding: 4px 8px;
     cursor: pointer;
+    border-radius: 4px;
+    background-color: $bg-black-t;
   }
 
   @media (hover: hover) {
     .email-submit-button:hover {
-      background-color: $hover-gray;
       color: $l-purp;
     }
   }

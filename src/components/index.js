@@ -10,6 +10,8 @@ export * from "./Contact/Contact";
 //
 export * from "./Footer/Footer";
 //
+export * from "./Loader/Loader";
+//
 export * from "./Blog/SingleBlogPost/SingleBlogPost";
 export * from "./Blog/BlogPostPreview/BlogPostPreview";
 export * from "./Blog/FeaturedPostsWidget/FeaturePostsWidget";

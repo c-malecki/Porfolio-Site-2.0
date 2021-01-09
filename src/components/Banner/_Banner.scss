@@ -42,8 +42,6 @@
   only screen and (min-device-width: 0px) and (max-width: 1024px) {
   .banner-container {
     height: 60vh;
-    background: center / cover no-repeat
-      url("https://portfolio-site-imgs.s3.us-east-2.amazonaws.com/mobilebanner.jpg");
 
     .banner-inner {
       position: relative;
@@ -62,8 +60,6 @@
   only screen and (min-device-width: 0px) and (max-width: 1024px) and (orientation: landscape) {
   .banner-container {
     height: 100vh;
-    background: center / cover no-repeat
-      url("https://portfolio-site-imgs.s3.us-east-2.amazonaws.com/mobilebanner.jpg");
 
     .banner-inner {
       position: relative;

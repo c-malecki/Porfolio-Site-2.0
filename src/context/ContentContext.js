@@ -1,19 +1,24 @@
 import React, { createContext, useState, useEffect } from "react";
-import { getBlogPosts } from "./contentful/client";
+import { getSiteContent } from "./contentful/client";
 
-export const BlogContext = createContext();
+export const ContentContext = createContext();
 
-export const BlogContextProvider = ({ children }) => {
+export const ContentContextProvider = ({ children }) => {
   const [blogState, setBlogState] = useState({
     isLoading: true,
     posts: null,
+    projects: null,
     error: null,
   });
   useEffect(() => {
-    getBlogPosts()
+    getSiteContent()
       .then((res) => {
-        const allPosts = res.map((p) => p.fields);
-        const allPostsSorted = allPosts.sort((a, b) => {
+        const allContent = res.map((p) => p.fields);
+        const projects = allContent.filter((c) => c.type === "project");
+        const blogPosts = allContent.filter((c) => c.type === "blog_post");
+        const pageContent = allContent.filter((c) => c.type === "page_content");
+
+        const allPostsSorted = blogPosts.sort((a, b) => {
           const dateA = new Date(a.date);
           const dateB = new Date(b.date);
           return dateA - dateB;
@@ -21,6 +26,8 @@ export const BlogContextProvider = ({ children }) => {
         setBlogState({
           isLoading: false,
           posts: allPostsSorted,
+          projects: projects,
+          pageContent: pageContent,
           error: null,
         });
       })
@@ -28,18 +35,20 @@ export const BlogContextProvider = ({ children }) => {
         setBlogState({
           isLoading: false,
           posts: null,
+          projects: null,
+          pageContent: null,
           error: error.message,
         })
       );
   }, []);
 
   return (
-    <BlogContext.Provider
+    <ContentContext.Provider
       value={{
         ...blogState,
       }}
     >
       {children}
-    </BlogContext.Provider>
+    </ContentContext.Provider>
   );
 };

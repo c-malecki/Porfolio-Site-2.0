@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
-import { BlogContext } from "../../../context/BlogContext";
+import { ContentContext } from "../../../context/ContentContext";
 import { reformatDate } from "../../../assets/util/dates";
 import MD from "react-markdown";
 
 export const SingleBlogPost = () => {
-  const { isLoading, posts } = useContext(BlogContext);
+  const { isLoading, posts } = useContext(ContentContext);
   const [postForPage, setPostForPage] = useState({
     pageIsLoading: true,
     post: null,
@@ -25,8 +25,7 @@ export const SingleBlogPost = () => {
         setPostForPage({
           pageIsLoading: false,
           post: null,
-          pageError:
-            "There was a problem loading this post or it does not exist.",
+          pageError: "There was a problem loading this post or it does not exist.",
         });
       }
     }
@@ -43,9 +42,7 @@ export const SingleBlogPost = () => {
         <>
           <div className="SinglePost-intro">
             <h2 className="SinglePost-intro-title">{post.title}</h2>
-            <small className="SinglePost-intro-date">
-              {reformatDate(post.date)}
-            </small>
+            <small className="SinglePost-intro-date">{reformatDate(post.date)}</small>
 
             <img
               className="SinglePost-intro-img"
@@ -53,9 +50,7 @@ export const SingleBlogPost = () => {
               alt={post.title}
             />
             {post.image_caption ? (
-              <span className="SinglePost-intro-imgcaption">
-                {post.image_caption}
-              </span>
+              <span className="SinglePost-intro-imgcaption">{post.image_caption}</span>
             ) : null}
           </div>
 

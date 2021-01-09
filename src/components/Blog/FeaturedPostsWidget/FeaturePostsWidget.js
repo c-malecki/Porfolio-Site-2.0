@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import { BlogContext } from "../../../context/BlogContext";
+import { ContentContext } from "../../../context/ContentContext";
 import { BlogPostPreview } from "../../index";
 import { reformatDate } from "../../../assets/util/dates";
 
 export const FeaturedPostsWidget = (props) => {
-  const { isLoading, posts } = useContext(BlogContext);
+  const { isLoading, posts } = useContext(ContentContext);
   const postsContent = () => {
     if (isLoading) {
       return <div>loading</div>;
