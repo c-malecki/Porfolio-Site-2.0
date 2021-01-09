@@ -2,17 +2,22 @@
   display: flex;
   flex-direction: column;
 
+  .sub-heading {
+    margin-bottom: 0;
+  }
+
+  .subtitle {
+    color: $off-white;
+    font-size: 1rem;
+    font-family: "Roboto-R";
+    margin-top: 0.5rem;
+  }
+
   p {
     color: $off-white;
     font-size: 1.2rem;
     font-family: "Roboto-R";
     padding-right: 20%;
-
-    a {
-      text-decoration: none;
-      color: rgb(27, 107, 255);
-      font-weight: bold;
-    }
   }
 
   p:nth-of-type(1) {
@@ -20,26 +25,23 @@
     margin-block-end: 0.5rem;
   }
 
-  .ProjectInfo-links {
-    margin-top: 1rem;
-    a {
-      text-decoration: none;
-      text-transform: uppercase;
-      margin-right: 2rem;
-      color: white;
-      font-size: 1.2rem;
-      font-weight: bold;
-      font-family: "Raleway";
-      border: 1px solid $border-gray;
-      padding: 0.5rem;
-      z-index: 1;
-    }
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: auto;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: "Raleway";
+    border: 1px solid $border-gray;
+    padding: 0.5rem;
+    z-index: 1;
+  }
 
-    @media (hover: hover) {
-      a:hover {
-        background-color: $hover-gray;
-        color: $l-purp;
-      }
+  @media (hover: hover) {
+    a:hover {
+      background-color: $hover-gray;
+      color: $l-purp;
     }
   }
 }

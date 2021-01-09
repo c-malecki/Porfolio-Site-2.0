@@ -1,19 +1,23 @@
 import React, { createContext, useState, useEffect } from "react";
 import { getBlogPosts } from "./contentful/client";
 
-export const BlogContext = createContext();
+export const ContentContext = createContext();
 
-export const BlogContextProvider = ({ children }) => {
+export const ContentContextProvider = ({ children }) => {
   const [blogState, setBlogState] = useState({
     isLoading: true,
     posts: null,
+    projects: null,
     error: null,
   });
   useEffect(() => {
     getBlogPosts()
       .then((res) => {
-        const allPosts = res.map((p) => p.fields);
-        const allPostsSorted = allPosts.sort((a, b) => {
+        const allContent = res.map((p) => p.fields);
+        const projects = allContent.filter((c) => c.contentType === "project");
+        const blogPosts = allContent.filter((c) => c.contentType === undefined);
+
+        const allPostsSorted = blogPosts.sort((a, b) => {
           const dateA = new Date(a.date);
           const dateB = new Date(b.date);
           return dateA - dateB;
@@ -21,6 +25,7 @@ export const BlogContextProvider = ({ children }) => {
         setBlogState({
           isLoading: false,
           posts: allPostsSorted,
+          projects: projects,
           error: null,
         });
       })
@@ -28,18 +33,19 @@ export const BlogContextProvider = ({ children }) => {
         setBlogState({
           isLoading: false,
           posts: null,
+          projects: null,
           error: error.message,
         })
       );
   }, []);
 
   return (
-    <BlogContext.Provider
+    <ContentContext.Provider
       value={{
         ...blogState,
       }}
     >
       {children}
-    </BlogContext.Provider>
+    </ContentContext.Provider>
   );
 };

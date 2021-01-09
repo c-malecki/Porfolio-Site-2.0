@@ -1,37 +1,20 @@
 import React from "react";
 
 export const ProjectInfo = (props) => {
-  const {
-    title,
-    description,
-    tech,
-    github,
-    demo,
-    time,
-    link,
-    link_text,
-  } = props;
+  const { title, subtitle, description, link } = props;
+  const formatDescription = description.split(`\n`).filter((text) => text !== "");
   return (
     <div className="ProjectInfo-contaner">
       <h3 className="sub-heading">{title}</h3>
-      <p>{time}</p>
-      <p>
-        {description}{" "}
-        {link ? (
-          <a href={link} target="_blank" rel="noopener noreferrer">
-            {link_text}
-          </a>
-        ) : null}
-      </p>
-      <p className="tech-p">{tech}</p>
-      <div className="ProjectInfo-links">
-        <a href={github} target="_blank" rel="noopener noreferrer">
-          github
+      <h5 className="subtitle">{subtitle}</h5>
+      {formatDescription.map((text, idx) => (
+        <p key={idx}>{text}</p>
+      ))}
+      {link ? (
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          Check It Out!
         </a>
-        <a href={demo} target="_blank" rel="noopener noreferrer">
-          demo
-        </a>
-      </div>
+      ) : null}
     </div>
   );
 };
